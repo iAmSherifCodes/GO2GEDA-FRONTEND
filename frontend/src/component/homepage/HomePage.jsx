@@ -1,5 +1,5 @@
-import image from "../homepage/assets/home.png"
-
+import image from "../homepage/assets/home.png";
+import "../homepage/HomePage.css";
 const HomePage = () =>{
     return(
         <>
