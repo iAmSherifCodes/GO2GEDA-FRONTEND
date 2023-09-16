@@ -12,7 +12,7 @@ const NavBar = () =>{
             <a href="/join-drive">Join to drive</a>
             <a href="/join-partner">Join to partner</a>
         </ul>
-        <button className={classes.loginButton}>login</button>
+        <button className={classes.loginButton}><a>Login</a></button>
         </div> 
 
         </>
