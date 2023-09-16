@@ -13,6 +13,10 @@
     padding-left: 50px;
     padding-right: 50px;
 }
+.Header a{
+    text-decoration: none;
+    color: white;
+}
 
 .navBar{
     display: flex;
