@@ -1,4 +1,4 @@
-import classes from "../component/signUp/SignUp.module.css";
+import classes from "../component/signIn/SignIn.module.css";
 
 const NavBar = () =>{
     return(
