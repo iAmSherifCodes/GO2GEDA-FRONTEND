@@ -1,3 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+
 .first-step{
-    width: 100%;
+    width: 50%;
 }
+
+.first-step img{
+    width: 150%;
+}
+
+.second-step{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-step p{
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.second-step h3{
+    font-size: 2rem;
+    color: #171FE7;
+    font-family: 'Open Sans';
+    
+}
+
+/* @font-face {
+    font-family: 'Open
+    Sans';
+    src: local('OpenSans')
+    url('/frontend/src/fonts/OpenSans-Italic-VariableFont_wdth\,wght.ttf');
+} */

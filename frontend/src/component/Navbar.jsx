@@ -6,13 +6,13 @@ const NavBar = () =>{
         <div className= {classes.Header}>
         <h3>Go2Geda</h3>
         <ul className={classes.navBar}>
-            <li>Home</li>
-            <li>FAQ</li>
-            <li>Join to ride</li>
-            <li>Join to drive</li>
-            <li>Join to partner</li>
+            <a href="/">Home</a>
+            <a href="">FAQ</a>
+            <a href="/join-ride">Join to ride</a>
+            <a href="/join-drive">Join to drive</a>
+            <a href="/join-partner">Join to partner</a>
         </ul>
-        <button className={classes.loginButton}>login</button>
+        <button className={classes.loginButton}><a>Login</a></button>
         </div> 
 
         </>
