@@ -1,6 +1,6 @@
 import NavBar from './component/Navbar';
 import HomePage from './component/homepage/HomePage';
-import SignUp from'./component/signUp/SignUp'
+import SignIn from'./component/signIn/SignIn'
 
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <>
     <NavBar />
     {/* <HomePage /> */}
-    <SignUp></SignUp>
+    <SignIn />
     </>
   );
 }

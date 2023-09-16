@@ -1,7 +1,8 @@
 .everything{
+    padding-top: 30px;
     background-color: rgb(172, 172, 255);
     height: 750px;
-    width: 1488px;
+    width: 1;
 }
 .Header{
     background-color: rgb(129, 129, 234);
@@ -9,9 +10,10 @@
     display: flex;
     color: white;
     justify-content: space-between;
-    width: 100%;
+    width: 1370px;
     padding-left: 50px;
     padding-right: 50px;
+    margin-bottom: 0px;
 }
 
 .navBar{
@@ -68,4 +70,7 @@
     background-color: rgb(99, 99, 212);
     border-radius: 5px;
     border: none;
+}
+.password ::placeholder{
+   padding-right: 20px;
 }
