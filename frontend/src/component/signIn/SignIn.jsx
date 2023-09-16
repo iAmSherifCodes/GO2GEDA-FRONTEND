@@ -1,6 +1,6 @@
-import classes from "./SignUp.module.css"
-import loginimage from "../signUp/assests/loginPicture.svg"
-const SignUp = () =>{
+import classes from "../signIn/SignIn.module.css"
+import loginimage from "../signIn/assests/loginPicture.svg"
+const SignIn = () =>{
     return(
         <div className={classes.everything}>
 
@@ -17,4 +17,4 @@ const SignUp = () =>{
         </div>
     )
 }
-export default SignUp
+export default SignIn;
