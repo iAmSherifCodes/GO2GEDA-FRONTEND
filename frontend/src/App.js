@@ -10,7 +10,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route exact path="/" Component={HomePage} />
-          <Route path="/sign-up" Component={SignIn} />
+          <Route path="/sign-in" Component={SignIn} />
         </Routes>
         </div>
     </BrowserRouter>
