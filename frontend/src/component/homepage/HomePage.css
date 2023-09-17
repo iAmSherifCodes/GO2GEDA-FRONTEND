@@ -10,16 +10,19 @@
 }
 
 .second-step{
-    margin-top: 15px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 40px;
 }
 
 .second-step p{
+    font-family: 'Open Sans';
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
+    color: #8181EA;
 }
 
 .second-step h3{
@@ -29,9 +32,38 @@
     
 }
 
-/* @font-face {
-    font-family: 'Open
-    Sans';
-    src: local('OpenSans')
-    url('/frontend/src/fonts/OpenSans-Italic-VariableFont_wdth\,wght.ttf');
-} */
+.third-step{
+    background-color: #8181EA;
+    border: 3px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    color: white;
+}
+.info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin-top: 40px;
+    width: 40%;
+}
+.third-step p{
+    font-family: 'Open Sans';
+    text-align: center;
+    font-size: 1.4rem;
+    margin-left: 30px;
+}
+.third-step img{
+    color: white;
+    width: 90px;
+    height: 90px;
+    margin-right: 20px;
+}
+
+hr{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 900px;
+}
