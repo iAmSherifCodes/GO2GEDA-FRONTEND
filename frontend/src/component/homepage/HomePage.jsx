@@ -46,9 +46,9 @@ const HomePage = () => {
         <div className="fourth-step">
           <h3>BOOK A RIDE WITH US TODAY</h3>
           <p>Discover new connections, save on costs, and travel in comfort.</p>
-          <div className="button">
-            <button>Join to ride</button>
-            <button>Join to drive</button>
+          <div className="btn">
+            <button className="button"><a href="join-to-ride">Join to ride</a></button>
+            <button className="button"><a href="join-to-ride">Join to drive</a></button>
           </div>
         </div>
       </div>

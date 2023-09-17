@@ -72,7 +72,7 @@ hr{
 .fourth-step{
     margin-bottom: 40px;    
     padding:30px;
-    color: #171FE7;
+    color: #8181EA;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -89,14 +89,24 @@ hr{
     font-size: 2.5rem;
 }
 
-.button{
+.btn{
     display: flex;
+    width: 480px;
+    align-items: center;
     justify-content: space-around;
-    width: 10%;
-    margin-top: 10px;
-    /* width: 120px; */
-    height: 10%;
-    border-radius: 10px;
-    border: none;
-    font-size: 17px;
+}
+
+.btn a{
+    text-decoration: none;
+    color: white;
+}
+
+.button{
+    padding: 20px;
+    width: 200px;
+    font-size: 20px;
+    border-radius:8px;
+    border: 0px;
+    margin-top: 20px;
+    background: #8181EA;
 }
