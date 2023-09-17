@@ -29,36 +29,37 @@
     font-size: 2rem;
     color: #171FE7;
     font-family: 'Open Sans';
-    
 }
 
 .third-step{
+    margin-top: 40px;
+    margin-bottom: 40px;
     background-color: #8181EA;
     border: 3px solid white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
     color: white;
 }
+
 .info{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    align-items: center; 
     padding: 10px;
     margin-top: 40px;
     width: 40%;
+    margin-bottom: 40px;
 }
+
 .third-step p{
     font-family: 'Open Sans';
-    text-align: center;
     font-size: 1.4rem;
-    margin-left: 30px;
+    margin-left: 150px;
 }
+
 .third-step img{
-    color: white;
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
     margin-right: 20px;
 }
 
@@ -66,4 +67,36 @@ hr{
     margin-top: 40px;
     margin-bottom: 40px;
     width: 900px;
+}
+
+.fourth-step{
+    margin-bottom: 40px;    
+    padding:30px;
+    color: #171FE7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans';
+}
+
+.fourth-step p{
+    border: 0px;
+    font-size: 1.9rem; 
+}
+
+.fourth-step h3{
+    font-size: 2.5rem;
+}
+
+.button{
+    display: flex;
+    justify-content: space-around;
+    width: 10%;
+    margin-top: 10px;
+    /* width: 120px; */
+    height: 10%;
+    border-radius: 10px;
+    border: none;
+    font-size: 17px;
 }
