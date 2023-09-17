@@ -38,7 +38,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     color: white;
 }
 .info{
@@ -53,12 +53,14 @@
     font-family: 'Open Sans';
     text-align: center;
     font-size: 1.4rem;
+    margin-left: 30px;
 }
-
-#icon1{
+.third-step img{
+    color: white;
+    width: 90px;
+    height: 90px;
     margin-right: 20px;
 }
-
 
 hr{
     margin-top: 40px;

@@ -7,7 +7,7 @@ const NavBar = () =>{
         <h3>Go2Geda</h3>
         <div className={classes.navBar}>
             <a href="/">Home</a>
-            <a href="">FAQ</a>
+            <a href="faq">FAQ</a>
             <a href="/join-ride">Join to ride</a>
             <a href="/join-drive">Join to drive</a>
             <a href="/join-partner">Join to partner</a>

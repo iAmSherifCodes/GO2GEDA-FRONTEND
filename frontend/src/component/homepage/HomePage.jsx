@@ -1,8 +1,8 @@
 import image from "../homepage/assets/home.png";
 import "../homepage/HomePage.css";
-import { Icon } from "@iconify/react";
-import userFriends from "@iconify/icons-fa-solid/user-friends";
-import currencyNaira from '@iconify/icons-tabler/currency-naira';
+import naira from "../homepage/assets/naira.png"
+import group from "../homepage/assets/friends.png"
+import partner from "../homepage/assets/partnership.png"
 
 const HomePage = () => {
   return (
@@ -25,7 +25,7 @@ const HomePage = () => {
 
         <div className="third-step">
           <div className="info">
-            <Icon icon={userFriends} width="90" height="90" id="icon" />
+            <img src={group} alt="group icon" />
             <p>
               Saying goodbye to expensive solo-ride and embracing <br />
               shared ride resulting in cheaper fare s per cheap{" "}
@@ -33,14 +33,17 @@ const HomePage = () => {
           </div>
           <hr />
           <div className="info">
-          <Icon icon={currencyNaira} width="90" height="90" id="icon1"/>
+          <img src={naira} alt="naira icon"/>
           <p>
             Enjoy you trip with minimum budget
           </p>
           </div>
           <hr />
           <div className="info">
-
+          <img src={partner} alt="partner icon"/>
+          <p>
+          have fun and get the opportunity to make new friends 
+          </p>
           </div>
         </div>
       </div>
