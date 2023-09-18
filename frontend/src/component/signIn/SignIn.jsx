@@ -1,6 +1,32 @@
+import { useState } from "react";
+// import axios from "axios";
 import classes from "../signIn/SignIn.module.css"
 import loginimage from "../signIn/assests/loginPicture.svg"
 const SignIn = () =>{
+    const credentials = {
+        email:"",
+        password:"",
+    }
+    const [loginDetails, setLoginDetails] = useState(credentials)
+
+    const CollectLoginDetails =async (e) =>{
+        e.preventDefault();
+
+        setLoginDetails((state)=>({
+            ...state,
+            [e.target.name]: e.target.value,
+        }));
+    }
+    const handleSubmit = (event) =>{
+        event.preventDefault();
+        const signInData = {
+            email: loginDetails.email,
+            password: loginDetails.password,
+        };
+
+        console.log(signInData)
+        // console.log(loginDetails)
+    }
     return(
         <div className={classes.everything}>
 
@@ -9,9 +35,9 @@ const SignIn = () =>{
             <div className={classes.form}>
                 <h1>Login</h1>
                 <p>don't have an account yet? <a href="">signUp</a></p>
-                <input type="password" placeholder="password" className={classes.password}></input> <br />
-                <input type="email" placeholder="Email" className={classes.email}></input> <br/>
-                <button className={classes.submitLoginDetails}>login</button>
+                <input type="email" placeholder="Email" name="email" onChange={CollectLoginDetails} className={classes.password}></input> <br />
+                <input type="password" placeholder="Password" name="password" onChange={CollectLoginDetails} className={classes.email}></input> <br/>
+                <button className={classes.submitLoginDetails} onClick={handleSubmit}>login</button>
             </div>
         </div>
         </div>
