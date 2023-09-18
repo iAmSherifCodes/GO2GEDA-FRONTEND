@@ -1,37 +1,122 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 
-
+/* .text-container{
+    height:800px;
+} */
 .first-step{
-    width: 50%;
+    width: 100%;
+    height: 800px;
+    /* margin-left:50px; */
+    margin-bottom: 0px;
+    /* background-image: url(../homepage/assets/g2g.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 75%; */
 }
 
-.first-step img{
-    width: 150%;
-}
+/* .first-step img{
+    width: 1000px;
+    height: 60%;
+} */
 
 .second-step{
-    margin-top: 15px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 40px;
 }
 
 .second-step p{
+    font-family: 'Open Sans';
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
+    color: #8181EA;
 }
 
 .second-step h3{
     font-size: 2rem;
     color: #171FE7;
     font-family: 'Open Sans';
-    
 }
 
-/* @font-face {
-    font-family: 'Open
-    Sans';
-    src: local('OpenSans')
-    url('/frontend/src/fonts/OpenSans-Italic-VariableFont_wdth\,wght.ttf');
-} */
+.third-step{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: #8181EA;
+    border: 3px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.info{
+    display: flex;
+    align-items: center; 
+    padding: 10px;
+    margin-top: 40px;
+    width: 40%;
+    margin-bottom: 40px;
+}
+
+.third-step p{
+    font-family: 'Open Sans';
+    font-size: 1.4rem;
+    margin-left: 150px;
+}
+
+.third-step img{
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+}
+
+hr{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 900px;
+}
+
+.fourth-step{
+    margin-bottom: 40px;    
+    padding:30px;
+    color: #8181EA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans';
+}
+
+.fourth-step p{
+    border: 0px;
+    font-size: 1.9rem; 
+}
+
+.fourth-step h3{
+    font-size: 2.5rem;
+}
+
+.btn{
+    display: flex;
+    width: 480px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.btn a{
+    text-decoration: none;
+    color: white;
+}
+
+.button{
+    padding: 20px;
+    width: 200px;
+    font-size: 20px;
+    border-radius:8px;
+    border: 0px;
+    margin-top: 20px;
+    background: #8181EA;
+}

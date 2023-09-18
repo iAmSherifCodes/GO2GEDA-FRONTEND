@@ -149,5 +149,12 @@
     
 }
 .password ::placeholder{
-   margin-right: 40px;
-}  */
+*/
+
+.navBar a{
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
