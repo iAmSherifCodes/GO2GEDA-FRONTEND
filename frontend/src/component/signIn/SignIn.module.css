@@ -1,18 +1,94 @@
+@media (min-width: 1920px) and (min-height: 1080px){
+    .everything{
+        padding-top: 30px;
+        background-color: rgb(172, 172, 255);
+        /* height: 100%; */
+        width: 100%;
+    }
+    .Header{
+        background-color: rgb(129, 129, 234);
+        display: flex;
+        color: white;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 0px;
+    }
+    
+    .navBar{
+        display: flex;
+        justify-content: space-between;
+        width: 600px;
+        color:white;
+        text-decoration: none;
+        list-style: none;
+    }
+    .loginButton{
+        margin-top: 10px;
+        width: 180px;
+        height: 60px;
+        border-radius: 10px;
+        border: none;
+        font-size: 20px;
+        margin-right: 60px;
+    }
+    .loginForm{
+        background-color: white;
+        margin-top: 50px;
+        margin-left: 450px;
+        height: 600px;
+        width: 900px;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.758);
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    
+    .loginPicture{
+        height:600px;
+    }
+    .form{
+        margin-right:   150px;
+    }
+    .password{
+        margin-top: 25px;
+        height: 50px;
+        width: 300px;
+        border-radius: 8px;
+        margin-bottom: 25px;
+    }
+    .email{
+        height: 50px;
+        width: 300px;
+        border-radius: 8px;
+        margin-bottom: 35px;
+    }
+    .submitLoginDetails{
+        width: 300px;
+        height: 40px;
+        background-color: rgb(99, 99, 212);
+        border-radius: 5px;
+        border: none;
+        
+    }
+    .password ::placeholder{
+       margin-right: 40px;
+    }
+  }
+  
+  
+/*   
 .everything{
     padding-top: 30px;
     background-color: rgb(172, 172, 255);
-    height: 750px;
-    width: 1;
+    height: 100%;
+    width: 100%;
 }
 .Header{
     background-color: rgb(129, 129, 234);
-    /* background-color: white; */
     display: flex;
     color: white;
     justify-content: space-between;
-    width: 1370px;
-    padding-left: 50px;
-    padding-right: 50px;
+    width: 100%;
     margin-bottom: 0px;
 }
 
@@ -31,9 +107,9 @@
     border-radius: 10px;
     border: none;
     font-size: 17px;
+    margin-right: 20px;
 }
 .loginForm{
-    /* background-color: #809BCE; */
     background-color: white;
     margin-top: 50px;
     margin-left: 290px;
@@ -70,7 +146,8 @@
     background-color: rgb(99, 99, 212);
     border-radius: 5px;
     border: none;
+    
 }
 .password ::placeholder{
-   padding-right: 20px;
-}
+   margin-right: 40px;
+}  */
