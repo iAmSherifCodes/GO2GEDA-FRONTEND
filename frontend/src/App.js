@@ -11,6 +11,7 @@ import DriverPhoto from "./component/verification/DriverPhoto";
 import DriverLicence from "./component/verification/DriverLicence";
 import VehicleInformation from "./component/verification/VehicleInformation";
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -26,6 +27,8 @@ function App() {
             <Route path="/drive" Component={DriverPhoto} />
             <Route path="/licence" Component={DriverLicence} />
             <Route path="/vehicleInfo" Component={VehicleInformation} />
+          <Route path="/view-trips" Component={ViewTrips} />
+          <Route path="/sign-up" Component={SignUp} />
         </Routes>
         {/*<Footer />*/}
         </div>

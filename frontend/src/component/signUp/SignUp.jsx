@@ -1,7 +1,7 @@
 import classes from "../signUp/SignUp.module.css"
 import loginimage from "../signIn/assests/loginPicture.svg"
 import { useState } from "react"
-import { collapseClasses } from "@mui/material"
+// import { collapseClasses } from "@mui/material"
 const SignUp = () =>{
     const credentials = {
         firstName: "",

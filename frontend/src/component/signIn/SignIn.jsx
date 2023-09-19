@@ -25,7 +25,6 @@ const SignIn = () =>{
         };
 
         console.log(signInData)
-        // console.log(loginDetails)
     }
     return(
         <div className={classes.everything}>
