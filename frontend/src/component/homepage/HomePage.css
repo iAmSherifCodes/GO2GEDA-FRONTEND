@@ -1,13 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 
-
+/* .text-container{
+    height:800px;
+} */
 .first-step{
-    width: 50%;
+    width: 100%;
+    height: 800px;
+    /* margin-left:50px; */
+    margin-bottom: 0px;
+    /* background-image: url(../homepage/assets/g2g.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 75%; */
 }
 
-.first-step img{
-    width: 150%;
-}
+/* .first-step img{
+    width: 1000px;
+    height: 60%;
+} */
 
 .second-step{
     margin-top: 40px;

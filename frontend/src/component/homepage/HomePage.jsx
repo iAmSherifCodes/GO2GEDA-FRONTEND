@@ -1,15 +1,22 @@
-import image from "../homepage/assets/home.png";
+import illustration from "../homepage/assets/g2g.png";
 import "../homepage/HomePage.css";
 import naira from "../homepage/assets/naira.png";
 import group from "../homepage/assets/friends.png";
 import partner from "../homepage/assets/partnership.png";
+// import Paper from '@mui/material/Paper';
 
 const HomePage = () => {
   return (
     <>
       <div className="container">
         <div className="first-step">
-          <img src={image} alt="Riders" />
+          {/* <div className="text-container">
+
+          </div> */}
+          <div className="illustration">
+            {/* <h3>GO2GEDA</h3> */}
+            <img src={illustration} alt="Riders" />
+          </div>
         </div>
 
         <div className="second-step">
@@ -47,8 +54,12 @@ const HomePage = () => {
           <h3>BOOK A RIDE WITH US TODAY</h3>
           <p>Discover new connections, save on costs, and travel in comfort.</p>
           <div className="btn">
-            <button className="button"><a href="join-to-ride">Join to ride</a></button>
-            <button className="button"><a href="join-to-ride">Join to drive</a></button>
+            <button className="button">
+              <a href="join-to-ride">Join to ride</a>
+            </button>
+            <button className="button">
+              <a href="join-to-ride">Join to drive</a>
+            </button>
           </div>
         </div>
       </div>

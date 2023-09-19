@@ -3,6 +3,8 @@ import Footer from "./component/footer/footer";
 import HomePage from "./component/homepage/HomePage";
 import SignIn from "./component/signIn/SignIn";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import SignUp from "./component/signUp/SignUp";
+import ViewTrips from "./component/viewtrips/viewtrips";
 import VerifyDriver from "./component/verification/VerifyDriver";
 import BasicInformation from "./component/verification/BasicInformation";
 import DriverPhoto from "./component/verification/DriverPhoto";
@@ -17,6 +19,8 @@ function App() {
         <Routes>
           <Route exact path="/" Component={HomePage} />
           <Route path="/sign-in" Component={SignIn} />
+          <Route path="/sign-up" Component={SignUp} />
+          <Route path="/view-trips" Component={ViewTrips} />
             <Route path="/verify" Component={VerifyDriver} />
             <Route path="/basicInfo" Component={BasicInformation} />
             <Route path="/drive" Component={DriverPhoto} />
