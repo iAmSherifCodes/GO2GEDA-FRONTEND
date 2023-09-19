@@ -35,8 +35,8 @@ const SignIn = () =>{
             <div className={classes.form}>
                 <h1>Login</h1>
                 <p>don't have an account yet? <a href="">signUp</a></p>
-                <input type="email" placeholder="Email" name="email" onChange={CollectLoginDetails} className={classes.password}></input> <br />
-                <input type="password" placeholder="Password" name="password" onChange={CollectLoginDetails} className={classes.email}></input> <br/>
+                <input type="email" placeholder="Email" name="email" onChange={CollectLoginDetails} className={classes.email}></input> <br />
+                <input type="password" placeholder="Password" name="password" onChange={CollectLoginDetails} className={classes.password}></input> <br/>
                 <button className={classes.submitLoginDetails} onClick={handleSubmit}>login</button>
             </div>
         </div>
