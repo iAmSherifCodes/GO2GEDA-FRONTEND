@@ -22,9 +22,7 @@ function App() {
             <Route path="/drive" Component={DriverPhoto} />
             <Route path="/licence" Component={DriverLicence} />
             <Route path="/vehicleInfo" Component={VehicleInformation} />
-
         </Routes>
-
         {/*<Footer />*/}
         </div>
     </BrowserRouter>
