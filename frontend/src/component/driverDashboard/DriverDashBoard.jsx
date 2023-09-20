@@ -9,7 +9,7 @@ const DriverDashBoard = () =>{
           <div>
             <SideBar></SideBar>
           </div>
-          {/* <div><img src={dashboardimage} alt="This is an image" /></div>  */}
+          
         </div>
     )
 }
