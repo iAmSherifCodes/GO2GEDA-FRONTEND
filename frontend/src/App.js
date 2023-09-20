@@ -7,6 +7,8 @@ import SignUp from "./component/signUp/SignUp";
 
 import ViewTrips from "./component/viewtrips/viewtrips";
 import ProfileInfo from "./component/Profile/ProfileInfo";
+import SideBar from "./component/sideBar/SideBar";
+import DriverDashBoard from "./component/driverDashboard/DriverDashBoard";
 
 
 function App() {
@@ -19,7 +21,9 @@ function App() {
           <Route path="/sign-in" Component={SignIn} />
           <Route path="/sign-up" Component={SignUp} />
           <Route path="/view-trips" Component={ViewTrips} />
-          <Route path="/profile" component={ProfileInfo}/>
+          <Route path="/profile" Component={ProfileInfo}/>
+          <Route path="/sideBar" Component={SideBar}/>
+          <Route path = "/driver-dashboard" Component={DriverDashBoard}/>
         </Routes>
 
         {/* <Footer /> */}
