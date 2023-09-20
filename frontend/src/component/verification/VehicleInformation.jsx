@@ -8,15 +8,9 @@ function VehicleInformation() {
         year: '',
         color: '',
         licensePlate: '',
-        vin: '',
         registrationNumber: '',
-        insuranceCompany: '',
-        insurancePolicyNumber: '',
-        insuranceExpirationDate: '',
-        odometerReading: '',
-        fuelType: '',
-        vehicleCondition: '',
-        additionalNotes: '',
+        carPicture: '',
+        carDocument: ''
     });
 
     const handleInputChange = (e) => {
@@ -24,9 +18,13 @@ function VehicleInformation() {
         setFormData({ ...formData, [name]: value });
     };
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // You can perform actions like submitting the form data here
+    };
+
     return (
-        <form>
-            {/* ... other form fields */}
+        <form onSubmit={handleSubmit}>
             <div>
                 <h3>Vehicle Information</h3>
                 <div>
@@ -37,14 +35,33 @@ function VehicleInformation() {
                     <label>Make:</label>
                     <input type="text" name="make" value={formData.make} onChange={handleInputChange} />
                 </div>
-                {/* Add more vehicle-related fields here */}
                 <div>
-                    <label>Additional Notes:</label>
-                    <textarea
-                        name="additionalNotes"
-                        value={formData.additionalNotes}
-                        onChange={handleInputChange}
-                    />
+                    <label>Model:</label>
+                    <input type="text" name="model" value={formData.model} onChange={handleInputChange} />
+                </div>
+                <div>
+                    <label>Year:</label>
+                    <input type="text" name="year" value={formData.year} onChange={handleInputChange} />
+                </div>
+                <div>
+                    <label>Color:</label>
+                    <input type="text" name="color" value={formData.color} onChange={handleInputChange} />
+                </div>
+                <div>
+                    <label>License Plate:</label>
+                    <input type="text" name="licensePlate" value={formData.licensePlate} onChange={handleInputChange} />
+                </div>
+                <div>
+                    <label>Registration Number:</label>
+                    <input type="text" name="registrationNumber" value={formData.registrationNumber} onChange={handleInputChange} />
+                </div>
+                <div>
+                    <label>Car Picture:</label>
+                    <input type="file" name="carPicture" onChange={handleInputChange} />
+                </div>
+                <div>
+                    <label>Car Document:</label>
+                    <input type="file" name="carDocument" onChange={handleInputChange} />
                 </div>
             </div>
             <div>
