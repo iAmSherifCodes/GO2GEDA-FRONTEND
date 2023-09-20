@@ -4,7 +4,7 @@ function VehicleInformation() {
     const [formData, setFormData] = useState({
         vehicleType: '',
         make: '',
-        model: '',
+        // model: '',
         year: '',
         color: '',
         licensePlate: '',
