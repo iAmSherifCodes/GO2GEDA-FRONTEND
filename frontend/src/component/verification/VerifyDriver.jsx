@@ -4,6 +4,9 @@ import "./style//verifyDriver.css";
 
 
 const VerifyDriver= ()=>{
+
+
+
     return(
         <div className="main">
 
@@ -26,7 +29,7 @@ const VerifyDriver= ()=>{
                  <div>
                      <Link to={"/drive"} style={{ textDecoration: 'none' }}  className="link">Driver Photo
                      </Link>
-                     < hr id="h" />
+                     < hr id="h"/>
                  </div> `
 
                  <div>
