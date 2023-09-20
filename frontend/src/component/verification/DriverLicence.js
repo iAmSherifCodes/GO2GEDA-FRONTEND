@@ -1,6 +1,7 @@
 
 import driverlicenense from '../asset/new_drivers_licence_nigeria.png'
 import {useState} from "react";
+import './style/driverLicence.css'
 const DriverLicence = ()=>{
 
     const initialState = {
@@ -14,15 +15,15 @@ const DriverLicence = ()=>{
     const formDataToSend = new FormData();
     formDataToSend.append('profilePicture', verifyForm.driverlicense);
 
-
     return(
-        <div>
+        <div className="driverlic-main">
+        <div className="driverlicence-maincontainer">
           <div>
              <h1>Take a photo of your Driver's license</h1>
               <div>
                   <p>All 4 sides of the license should be photographed.
-                      Ensure that the license number on the top left is
-                      clearly visible in the image photographed</p>
+                      Ensure that <br/>the license number on the top left is
+                      clearly visible in the image <br/>photographed</p>
               </div>
           </div>
             <div>
@@ -41,7 +42,7 @@ const DriverLicence = ()=>{
                 </label>
 
             </div>
-
+        </div>
         </div>
     )
 }
