@@ -1,0 +1,94 @@
+.main-container {
+    background-color:white;
+    /*width: 100%;*/
+    /*height: 100vh;*/
+    padding: 20px;
+    margin: 20px;
+    box-sizing: border-box;
+    font-family: UberMove, UberMoveText, 'Helvetica Neue', Helvetica, sans-serif;
+    /*font-size: 0.875em;*/
+    /*line-height: 1.71429;*/
+}
+
+.welcom h1{
+    margin-left: 400px;
+    font-size: 40px;
+    font-family: "Arial Black", serif;
+}
+#regd{
+    font-size: 25px;
+    margin-left: 420px;
+}
+#need{
+    font-size: 20px;
+    margin-left:  420px;
+    margin-bottom: 30px;
+}
+.required ul {
+    margin-left:  420px;
+    font-size: 15px;
+
+}
+.link {
+    color: #0c0c0c;
+    margin-bottom: 90px;
+}
+.link:hover {
+    color: #00F
+}
+#h {
+    margin-left: 10px;
+    width: 400px;
+    margin-bottom: 90px;
+}
+#fowrd1{
+    margin-left: 300px;
+}
+#fowrd2{
+    margin-left: 280px;
+}
+#fowrd3{
+    margin-left: 270px;
+}
+#fowrd4{
+    margin-left: 210px;
+}
+
+@media screen and (max-width: 360px) {
+    @media (device-width: 100vw) and (device-height: 100vh)
+
+    .welcom h1 {
+        font-size: 28px;
+        margin-left: 0;
+    }
+
+    #regd {
+        font-size: 30px;
+        margin-left: 330px;
+
+
+    }
+
+    #need {
+        font-size: 18px;
+        margin-left: 330px;
+
+    }
+
+    .required ul {
+        font-size: 16px;
+        margin-left: 0;
+    }
+
+    #h {
+        width: auto;
+        margin-left: 0;
+    }
+
+    #fowrd1,
+    #fowrd2,
+    #fowrd3,
+    #fowrd4 {
+        margin-left: 0;
+    }
+}
