@@ -1,4 +1,4 @@
-@media (min-width: 1920px) and (min-height: 1080px){
+/* @media (min-width: 1920px) and (min-height: 1080px){ */
     .everything{
         padding-top: 30px;
         background-color: rgb(172, 172, 255);
@@ -73,7 +73,7 @@
     .password ::placeholder{
        margin-right: 40px;
     }
-  }
+  /* } */
   
   
 /*   
