@@ -3,21 +3,22 @@ import "../homepage/HomePage.css";
 import naira from "../homepage/assets/naira.png";
 import group from "../homepage/assets/friends.png";
 import partner from "../homepage/assets/partnership.png";
-import anime from "../homepage/assets/anime.json"
+import anime from "../homepage/assets/anime.json";
 import Lottie from "lottie-react";
 
 const HomePage = () => {
+
   return (
     <>
       <div className="container">
         <div className="first-step">
-          <div className="text-container">
-            <Lottie className="anime" animationData={anime}></Lottie>
-          </div>
-          <div className="illustration">
+          {/* <div className="anime-container"> */}
+            <Lottie className="anime-container" animationData={anime}></Lottie>
+          {/* </div> */}
+          {/* <div className="illustration"> */}
             {/* <h3>GO2GEDA</h3> */}
-            <img src={illustration} alt="Riders"/>
-          </div>
+            <img src={illustration} alt="Riders" />
+          {/* </div> */}
         </div>
 
         <div className="second-step">

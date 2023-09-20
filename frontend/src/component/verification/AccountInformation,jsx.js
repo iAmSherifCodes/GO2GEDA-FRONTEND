@@ -2,7 +2,7 @@ import {useState} from "react";
 
 const AccountInformation =()=>{
     const initialState ={
-        Bank: '',
+        BankName: '',
         Bvn: '',
         AccountName:''
     }

@@ -1,45 +1,70 @@
+*{
+    margin: 0;
+}
+
+.main{
+    background-color: rgb(172, 172, 255);
+    height: 88.3vh;
+    padding-top: 50px;
+}
+
+
 .main-container {
     background-color:white;
-    /*width: 100%;*/
-    /*height: 100vh;*/
-    padding: 20px;
-    margin: 20px;
+    width: 550px;
+    /*margin-top: 30px;*/
+    /*height:900px;*/
+    /*margin-bottom: 90px;*/
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.758);
+     justify-content: center;
+    /*margin-right: 90px;*/
+    margin: auto;
+    border: 1px solid #DADCE0;
+    border-radius: 30px;
+    font-size: 16px;
+    /*padding:  30px;*/
+    outline: none;
+    /*border: 70px;*/
+    padding-top: 20px;
+    /*margin: 60px;*/
     box-sizing: border-box;
-    font-family: UberMove, UberMoveText, 'Helvetica Neue', Helvetica, sans-serif;
+    /*font-family: UberMove, UberMoveText, 'Helvetica Neue', Helvetica, sans-serif;*/
     /*font-size: 0.875em;*/
     /*line-height: 1.71429;*/
 }
 
-.welcom h1{
-    margin-left: 400px;
+h1{
+    margin-left: 90px;
     font-size: 40px;
-    font-family: "Arial Black", serif;
+    font-family: "Open Sans";
 }
 #regd{
+    margin-left: 90px;
     font-size: 25px;
-    margin-left: 420px;
+    padding-bottom: 10px;
 }
 #need{
-    font-size: 20px;
-    margin-left:  420px;
+    font-size: 13px;
+    margin-left: 90px;
     margin-bottom: 30px;
 }
 .required ul {
-    margin-left:  420px;
+    margin-left: 50px;
     font-size: 15px;
 
 }
 .link {
     color: #0c0c0c;
-    margin-bottom: 90px;
+    /*margin-bottom: 90px;*/
 }
 .link:hover {
     color: #00F
 }
 #h {
     margin-left: 10px;
-    width: 400px;
-    margin-bottom: 90px;
+    width: 370px;
+    margin-top: 10px;
+    /*margin-bottom: 90px;*/
 }
 #fowrd1{
     margin-left: 300px;
