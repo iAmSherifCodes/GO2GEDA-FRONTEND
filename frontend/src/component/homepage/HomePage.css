@@ -35,10 +35,15 @@
     font-family: 'Open Sans';
 }
 .anime-container{
+<<<<<<< HEAD
     height: 400px;
     width: 400px;
     margin-right: 0px;
     
+=======
+    height: 200px;
+
+>>>>>>> d0f058c2cc3cb73a55a1d638e07de2578fef1713
 }
 
 .first-step img{
@@ -82,7 +87,7 @@
 
 .info{
     display: flex;
-    align-items: center; 
+    align-items: center;
     padding: 10px;
     margin-top: 40px;
     width: 40%;
@@ -108,7 +113,7 @@ hr{
 }
 
 .fourth-step{
-    margin-bottom: 40px;    
+    margin-bottom: 40px;
     padding:30px;
     color: #8181EA;
     display: flex;
@@ -120,7 +125,7 @@ hr{
 
 .fourth-step p{
     border: 0px;
-    font-size: 1.9rem; 
+    font-size: 1.9rem;
 }
 
 .fourth-step h3{
