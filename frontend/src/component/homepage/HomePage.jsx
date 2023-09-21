@@ -12,13 +12,12 @@ const HomePage = () => {
     <>
       <div className="container">
         <div className="first-step">
-          {/* <div className="anime-container"> */}
-            <Lottie className="anime-container" animationData={anime}></Lottie>
-          {/* </div> */}
-          {/* <div className="illustration"> */}
-            {/* <h3>GO2GEDA</h3> */}
-            <img src={illustration} alt="Riders" />
-          {/* </div> */}
+          <div className="text">
+          <h3>Welcome to <span style={{color: "blue"}}>Go2Geda</span></h3>
+          <h4>Transportation made easy.</h4>
+          <h4 id="ensure">Ensuring comfortable and affordable transportation</h4>
+          </div>
+          <Lottie className="anime-container" animationData={anime}></Lottie>
         </div>
 
         <div className="second-step">

@@ -5,7 +5,7 @@ import "./style//verifyDriver.css";
 //  import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 // import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-<<<<<<< HEAD
+
 const VerifyDriver = () => {
   return (
     <div>
@@ -65,7 +65,7 @@ const VerifyDriver = () => {
               <hr id="h" />
             </div>
           </uL>
-=======
+
 const VerifyDriver= ()=>{
     return(
         <div className="main">
@@ -110,10 +110,11 @@ const VerifyDriver= ()=>{
                    </div>
                  </uL>
              </div>
->>>>>>> a9643b352ef7ca2477d0506a9ecb0a08ffaf8dd5
+
         </div>
       </div>
-    </div>
+   
   );
-};
+
+
 export default VerifyDriver;

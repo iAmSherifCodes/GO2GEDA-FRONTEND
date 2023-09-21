@@ -5,17 +5,39 @@
 } */
 .first-step{
     width: 100%;
-    height: 300px;
-    /* margin-left:50px; */
-    margin-bottom: 10px;
+    height: 400px;
+    margin-top:40px;
+    margin-bottom: 150px;
     display: flex;
-    /* background-image: url(../homepage/assets/g2g.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 75%; */
+    justify-content: center;
+}
+
+.text{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#ensure{
+    width: 80%;
+}
+
+.text h4{
+    font-size: 3rem;
+    width: 70%;
+    font-family: 'Open Sans';
+}
+.first-step h3{
+    height: 150px;
+    width: 70%;
+    font-size: 5rem;
+    font-family: 'Open Sans';
 }
 .anime-container{
-    height: 200px;
+    height: 400px;
+    width: 400px;
+    margin-right: 0px;
     
 }
 
