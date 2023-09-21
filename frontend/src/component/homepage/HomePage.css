@@ -5,19 +5,25 @@
 } */
 .first-step{
     width: 100%;
-    height: 800px;
+    height: 300px;
     /* margin-left:50px; */
-    margin-bottom: 0px;
+    margin-bottom: 10px;
+    display: flex;
     /* background-image: url(../homepage/assets/g2g.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 75%; */
 }
+.anime-container{
+    height: 200px;
 
-/* .first-step img{
-    width: 1000px;
-    height: 60%;
-} */
+}
+
+.first-step img{
+    width: 25%;
+    height: 25%;
+    margin-left: 600px;
+}
 
 .second-step{
     margin-top: 40px;
@@ -54,7 +60,7 @@
 
 .info{
     display: flex;
-    align-items: center; 
+    align-items: center;
     padding: 10px;
     margin-top: 40px;
     width: 40%;
@@ -80,7 +86,7 @@ hr{
 }
 
 .fourth-step{
-    margin-bottom: 40px;    
+    margin-bottom: 40px;
     padding:30px;
     color: #8181EA;
     display: flex;
@@ -92,7 +98,7 @@ hr{
 
 .fourth-step p{
     border: 0px;
-    font-size: 1.9rem; 
+    font-size: 1.9rem;
 }
 
 .fourth-step h3{

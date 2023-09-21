@@ -1,0 +1,15 @@
+.card{
+    width: 250px;
+    height: 90vh;
+    display: flex;
+    background-color: rgb(172, 172, 255);
+}
+.link{
+ font-size: 25px;
+ color: black; 
+ padding: 20px;
+ text-decoration: none;
+}
+.linkDiv{
+    margin-bottom: 25px;
+}

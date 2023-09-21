@@ -1,0 +1,163 @@
+*{
+    margin:0;
+}
+.vehicle-main {
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #DADCE0;
+    margin: auto;
+    width: 600px;
+    height: 630px;
+    padding-top: 20px;
+    line-height: 40px;
+    box-sizing: border-box;
+}
+.vehicle-main p{
+    margin-left: 30px;
+    font-size: 15px;
+    font-weight: lighter;
+}
+.vehicleMainContainer{
+    background-color: rgb(172, 172, 255);
+    height: 900px;
+    padding-top: 30px;
+}
+.vehiclInfo{
+    margin-left: 200px;
+}
+.vehicleTypeTxt{
+    margin-left: 30px;
+}
+.labeltxt{
+
+}
+
+.vehicleTypeTxt input{
+    height: 20px;
+    width: 300px;
+    margin-right: -14px;
+    /*border-radius: 7px;*/
+    /*margin-bottom: 18px;*/
+}
+.vehicleTypeTxt label{
+    font-size: 20px;
+    margin-right: 30px;
+}
+.makeTypeTxt{
+    margin-left: 30px;
+}
+.makeTypeTxt label{
+    font-size: 20px;
+    margin-right: 24px;
+}
+.makeTypeTxt input{
+    height: 20px;
+    width: 300px;
+    /*border-radius: 7px;*/
+    /*margin-bottom: 18px;*/
+    /*margin-right: 10px;*/
+}
+.modelType{
+    margin-left: 30px;
+}
+.modelType label{
+    font-size: 20px;
+    margin-right: 9px;
+}
+.modelType input{
+    height: 20px;
+    width: 300px;
+    /*border-radius: 7px;*/
+    /*margin-bottom: 18px;*/
+}
+
+.yearType{
+    margin-left: 36px;
+}
+.yearType label{
+    margin-right: 28px;
+    font-size: 20px;
+}
+.yearType input{
+    height: 20px;
+    width: 300px;
+}
+.color{
+    margin-left: 5px;
+}
+.color label{
+    margin-left: 25px;
+    font-size: 20px;
+}
+.color input{
+    height: 20px;
+    width: 300px;
+    margin-left: 20px;
+}
+.license{
+    margin-left: 5px;
+}
+.license label{
+    margin-left: 30px;
+    font-size: 20px;
+
+}
+.license input{
+    height: 20px;
+    width: 300px;
+    margin-left: 20px;
+}
+.registNumb{
+    margin-left: 5px;
+
+}
+.registNumb label{
+    margin-left: 22px;
+    font-size: 16px;
+}
+.registNumb input{
+    height: 20px;
+    width: 290px;
+    margin-left: 10px;
+}
+.carpict{
+    margin-left: 5px;
+
+}
+.carpict label{
+    margin-left: 22px;
+    font-size: 20px;
+}
+.carpict input {
+    /*    height: 70px;*/
+       margin-left: 80px;
+    /*}*/
+}
+.cardocum {
+    /*margin-left: 5px;*/
+}
+.cardocum input{
+    /*height: 70px;*/
+    margin-left: 80px;
+
+}
+.cardocum label{
+    /*margin-bottom: 10px;*/
+    margin-left: 22px;
+    font-size: 20px;
+}
+.submit{
+    margin-left: 100px;
+
+
+}
+.submit button{
+    margin-top: 25px;
+    width: 400px;
+    height: 40px;
+    background-color: rgb(16, 16, 227);
+    color:white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}

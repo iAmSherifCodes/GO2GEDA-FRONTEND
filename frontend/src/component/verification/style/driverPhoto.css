@@ -1,0 +1,42 @@
+*{
+margin: 0;
+}
+.main-driverphoto{
+    background-color: rgb(172, 172, 255);
+    height: 900px;
+    padding-top: 30px;
+}
+.main-containerdriverphoto{
+    border-radius: 10px;
+    background-color:white;
+    border: 1px solid #DADCE0;
+     margin: auto;
+     width: 600px;
+      height: 600px;
+     padding-top: 20px;
+    line-height: 40px;
+    box-sizing: border-box;
+
+
+}
+#profilephoto{
+    font-size: 20px;
+}
+.youProfiletxt p{
+    font-size: 15px;
+    margin-left: 87px;
+}
+.othertxt p{
+    /*font-size: ;*/
+    font-weight: 90;
+    margin-left: 80px;
+}
+ img{
+    width: 300px;
+     height: 250px;
+    margin-left: 120px;
+}
+.avatar-upload span{
+    margin-left: 120px;
+    font-size: 30px;
+}
