@@ -1,0 +1,47 @@
+*{
+    margin:0
+}
+.homemain {
+    border-radius: 12px;
+    background-color: white;
+    border: 1px solid #DADCE0;
+    /*margin: auto;*/
+    margin-top: 170px;
+    margin-left:400px ;
+    width: 600px;
+    height: 100px;
+    box-shadow: 0 24px 50px -12px rgba(0, 0, 0, 0.758);
+    padding-top: 50px
+}
+.main-containerHome{
+    background-color: rgb(172, 172, 255);
+    height: 900px;
+    padding-top: 30px;
+}
+.home-addres{
+    margin-left: 30px;
+}
+
+
+.home-addres label{
+    margin-left: 22px;
+    font-size: 20px;
+}
+.home-addres input{
+    height: 20px;
+    width: 290px;
+    margin-left: 10px;
+}
+.submitbasic{
+    margin-left: 100px;
+}
+.submitbasic button{
+    margin-top: 25px;
+    width: 400px;
+    height: 40px;
+    background-color: rgb(16, 16, 227);
+    color:white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}

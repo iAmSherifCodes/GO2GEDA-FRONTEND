@@ -4,7 +4,7 @@
 
 .main{
     background-color: rgb(172, 172, 255);
-    height: 88.3vh;
+    height: 100.3vh;
     padding-top: 50px;
 }
 
@@ -12,13 +12,14 @@
 .main-container {
     background-color:white;
     width: 550px;
+    margin-left: 400px;
     /*margin-top: 30px;*/
-    /*height:900px;*/
+    /*height:650px;*/
     /*margin-bottom: 90px;*/
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.758);
      justify-content: center;
     /*margin-right: 90px;*/
-    margin: auto;
+    /*margin: auto;*/
     border: 1px solid #DADCE0;
     border-radius: 30px;
     font-size: 16px;
@@ -77,6 +78,19 @@ h1{
 }
 #fowrd4{
     margin-left: 210px;
+}
+.submitbasicverif{
+    margin-left: 50px;
+}
+.submitbasicverif button {
+    margin-bottom: 25px;
+    width: 300px;
+    height: 40px;
+    background-color: rgb(16, 16, 227);
+    color:white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 360px) {
