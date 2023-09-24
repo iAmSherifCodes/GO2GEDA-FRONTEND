@@ -23,7 +23,7 @@
 }
 .accountName label{
     margin-left: 22px;
-    font-size: 20px
+    font-size: 17px
 }
 .accountName input{
     height: 30px;
@@ -35,7 +35,7 @@
 }
 .bank-verif label{
     margin-left: 25px;
-    font-size: 20px
+    font-size: 17px
 }
 .bank-verif input {
     height: 30px;
@@ -44,7 +44,7 @@
 }
 .bank-name label{
     margin-left: 22px;
-    font-size: 20px
+    font-size: 17px
 }
 .bank-name input{
     height: 30px;

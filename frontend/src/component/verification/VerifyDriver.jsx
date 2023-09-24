@@ -8,6 +8,7 @@ const VerifyDriver= ()=>{
     return(
         <div className="main">
         <div className="main-container">
+
             <div className="welcom">
                 <h1>Welcome,</h1>
                     <h3 id="regd">Required steps</h3>

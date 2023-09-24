@@ -1,13 +1,11 @@
 *{
     margin: 0;
 }
-
 .main{
     background-color: rgb(172, 172, 255);
     height: 100.3vh;
     padding-top: 50px;
 }
-
 
 .main-container {
     background-color:white;
