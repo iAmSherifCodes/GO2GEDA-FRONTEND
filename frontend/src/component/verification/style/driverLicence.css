@@ -21,8 +21,30 @@ h1{
 p{
     margin-left: 90px;
 }
-img{
-    margin-left: 170px;
+.drive-liceImage img{
+    width: 420px;
+    height: 300px;
+    margin-left: 92px;
 }
-
+.pic-uploadlic{
+    margin-left: 30px;
+    font-size: 18px;
+}
+.pic-uploadlic label{
+    margin-left: 63px;
+    font-size: 17px;
+}
+.submitdriverlicAcc{
+    margin-left: 93px;
+}
+.submitdriverlicAcc button{
+    margin-top: 10px;
+    width: 450px;
+    height: 40px;
+    background-color: rgb(12, 12, 12);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
 

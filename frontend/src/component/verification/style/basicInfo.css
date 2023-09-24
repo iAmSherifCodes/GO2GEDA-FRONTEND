@@ -9,7 +9,7 @@
     margin-top: 170px;
     margin-left:400px ;
     width: 600px;
-    height: 100px;
+    height: 270px;
     box-shadow: 0 24px 50px -12px rgba(0, 0, 0, 0.758);
     padding-top: 50px
 }
@@ -19,17 +19,18 @@
     padding-top: 30px;
 }
 .home-addres{
-    margin-left: 30px;
+    margin-left: 9px;
+    margin-top: 10px;
 }
 
 
 .home-addres label{
     margin-left: 22px;
-    font-size: 20px;
+    font-size: 15px;
 }
 .home-addres input{
     height: 20px;
-    width: 290px;
+    width: 350px;
     margin-left: 10px;
 }
 .submitbasic{
@@ -44,4 +45,40 @@
     border-radius: 5px;
     border: none;
     cursor: pointer;
+}
+.homemain h2{
+    margin-left: 250px;
+    margin-bottom: 20px;
+}
+.state-addres{
+    margin-left: 30px;
+    margin-top: 15px;
+    /*margin-left: 10px;*/
+}
+
+.state-addres label{
+    /*margin-left: 22px;*/
+    /*font-size: 20px;*/
+}
+.state-addres input{
+    height: 20px;
+    width: 350px;
+    margin-left: 69px;
+    /*margin-top: 30px;*/
+}
+.local-addres label{
+    /*margin-left: 22px;*/
+    /*font-size: 20px;*/
+}
+
+.local-addres{
+    margin-left: 30px;
+    margin-top: 15px;
+    /*font-size: 20px;*/
+}
+
+.local-addres input{
+    margin-left: 35px;
+    width: 350px;
+    /*font-size: 20px;*/
 }

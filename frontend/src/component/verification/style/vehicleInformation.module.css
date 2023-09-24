@@ -15,7 +15,7 @@
 .vehicle-main p{
     margin-left: 30px;
     font-size: 15px;
-    font-weight: lighter;
+    /*font-weight: lighter;*/
 }
 .vehicleMainContainer{
     background-color: rgb(172, 172, 255);
@@ -40,14 +40,14 @@
     /*margin-bottom: 18px;*/
 }
 .vehicleTypeTxt label{
-    font-size: 20px;
+    font-size: 15px;
     margin-right: 30px;
 }
 .makeTypeTxt{
     margin-left: 30px;
 }
 .makeTypeTxt label{
-    font-size: 20px;
+    font-size: 15px;
     margin-right: 24px;
 }
 .makeTypeTxt input{
@@ -61,22 +61,22 @@
     margin-left: 30px;
 }
 .modelType label{
-    font-size: 20px;
-    margin-right: 9px;
+    font-size: 15px;
+    margin-right: 11px;
 }
 .modelType input{
     height: 20px;
     width: 300px;
-    /*border-radius: 7px;*/
+    /*border-radius: 2px;*/
     /*margin-bottom: 18px;*/
 }
 
 .yearType{
-    margin-left: 36px;
+    margin-left: 30px;
 }
 .yearType label{
     margin-right: 28px;
-    font-size: 20px;
+    font-size: 15px;
 }
 .yearType input{
     height: 20px;
@@ -87,19 +87,19 @@
 }
 .color label{
     margin-left: 25px;
-    font-size: 20px;
+    font-size: 15px;
 }
 .color input{
     height: 20px;
     width: 300px;
-    margin-left: 20px;
+    margin-left: 18px;
 }
 .license{
     margin-left: 5px;
 }
 .license label{
-    margin-left: 30px;
-    font-size: 20px;
+    margin-left: 25px;
+    font-size: 15px;
 
 }
 .license input{
@@ -113,12 +113,12 @@
 }
 .registNumb label{
     margin-left: 22px;
-    font-size: 16px;
+    font-size: 15px;
 }
 .registNumb input{
     height: 20px;
-    width: 290px;
-    margin-left: 10px;
+    width: 300px;
+    margin-left: 25px;
 }
 .carpict{
     margin-left: 5px;
@@ -126,11 +126,12 @@
 }
 .carpict label{
     margin-left: 22px;
-    font-size: 20px;
+    font-size: 15px;
 }
 .carpict input {
     /*    height: 70px;*/
-       margin-left: 80px;
+       margin-left: 40px;
+    /*    width: 500px;*/
     /*}*/
 }
 .cardocum {
@@ -138,24 +139,23 @@
 }
 .cardocum input{
     /*height: 70px;*/
-    margin-left: 80px;
-
+    margin-left: 18px;
 }
 .cardocum label{
     /*margin-bottom: 10px;*/
-    margin-left: 22px;
-    font-size: 20px;
+    margin-left: 26px;
+    font-size: 15px;
 }
 .submit{
-    margin-left: 100px;
+    margin-left: 50px;
 
 
 }
 .submit button{
     margin-top: 25px;
-    width: 400px;
+    width: 500px;
     height: 40px;
-    background-color: rgb(16, 16, 227);
+    background-color: rgb(12, 12, 12);
     color:white;
     border-radius: 5px;
     border: none;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import VehicleCss from  './style/vehicleInformation.module.css'
-
+import {useNavigate} from 'react-router-dom';
 function VehicleInformation() {
     const [formData, setFormData] = useState({
         vehicleType: '',
@@ -18,9 +18,14 @@ function VehicleInformation() {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
     };
-
+    const navigate = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault();
+        alert("successful")
+        navigate('/verify');
+        console.log(formData)
+
+
     };
 
     return (
@@ -37,35 +42,35 @@ function VehicleInformation() {
                 </div>
                 <div className={VehicleCss.makeTypeTxt}>
                     <label>Vehicle Make</label>
-                    <input type="text" name="make" value={formData.make} onChange={handleInputChange} />
+                    <input type="text" name="make" value={formData.make} onChange={handleInputChange} required/>
                 </div>
                 <div className={VehicleCss.modelType}>
                     <label>Vehicles Model</label>
-                    <input type="text" name="model" value={formData.model} onChange={handleInputChange} />
+                    <input type="text" name="model" value={formData.model} onChange={handleInputChange} required />
                 </div>
                 <div className={VehicleCss.yearType}>
                     <label>Vehicle Year:</label>
-                    <input type="text" name="year" value={formData.year} onChange={handleInputChange} />
+                    <input type="text" name="year" value={formData.year} onChange={handleInputChange} required />
                 </div>
                 <div className={VehicleCss.color}>
                     <label>Vehicles Color</label>
-                    <input type="text" name="color" value={formData.color} onChange={handleInputChange} />
+                    <input type="text" name="color" value={formData.color} onChange={handleInputChange} required />
                 </div>
                 <div className={VehicleCss.license}>
                     <label>License Plate:</label>
-                    <input type="text" name="licensePlate" value={formData.licensePlate} onChange={handleInputChange} />
+                    <input type="text" name="licensePlate" value={formData.licensePlate} onChange={handleInputChange} required/>
                 </div>
                 <div className={VehicleCss.registNumb}>
-                    <label>Registration Number</label>
-                    <input type="text" name="registrationNumber" value={formData.registrationNumber} onChange={handleInputChange} />
+                    <label>Regist Numb</label>
+                    <input type="text" name="registrationNumber" value={formData.registrationNumber} onChange={handleInputChange} required />
                 </div>
                 <div className={VehicleCss.carpict}>
                     <label>Car Picture</label>
-                    <input type="file" name="carPicture" onChange={handleInputChange} />
+                    <input type="file" name="carPicture" onChange={handleInputChange} required/>
                 </div>
                 <div className={VehicleCss.cardocum}>
                     <label>Car Document</label>
-                    <input type="file" name="carDocument" onChange={handleInputChange} />
+                    <input type="file" name="carDocument" onChange={handleInputChange} required />
                 </div>
                 <div className={VehicleCss.submit}>
                     <button type="submit">Submit</button>
