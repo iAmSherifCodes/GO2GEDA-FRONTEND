@@ -1,3 +1,87 @@
 *{
     margin: 0;
 }
+.main-com{
+    background-color: rgb(172, 172, 255);
+    height: 900px;
+    padding-top: 30px;
+}
+.commuter-verify-innerConatiner{
+    border-radius: 12px;
+    background-color: white;
+    border: 1px solid #DADCE0;
+    /*margin: auto;*/
+    margin-top: 120px;
+    margin-left:380px ;
+    width: 600px;
+    height: 270px;
+    box-shadow: 0 24px 50px -12px rgba(0, 0, 0, 0.758);
+    padding-top: 50px
+    /*box-shadow: 0 24px 50px -12px rgba(0, 0, 0, 0.758);*/
+    /*padding-top: 50px*/
+}
+.commuter-verify-innerConatiner h2{
+    margin-left:250px ;
+}
+.add{
+    margin-left: 30px;
+    margin-top: 15px;
+}
+.add label{
+
+}
+.add input{
+    margin-left: 48px;
+    width: 370px;
+}
+.commuter picture input{
+    margin-left: 18px;
+}
+
+.sta-addres label{
+    margin-left: 29px;
+    font-size: 15px
+}
+.sta-addres input{
+    margin-left: 72px;
+    margin-top: 20px;
+    width: 370px;
+}
+.loc-addres label{
+    margin-left: 30px;
+    font-size: 15px
+}
+.commuterpicture{
+    margin-top: 17px;
+}
+.commuterpicture label{
+    margin-left: 25px;
+    font-size: 15px;
+}
+.commuterpicture input{
+    margin-left: 20px;
+}
+.loc-addres input{
+    margin-left: 40px;
+    margin-top: 20px;
+    width: 370px;
+}
+.submitverify{
+    margin-left: 30px;
+}
+.submitverify button{
+    margin-top: 25px;
+    width: 540px;
+    height: 40px;
+    background-color: rgb(12, 12, 12);
+    color:white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+}
+/*!*}*!*/
+/*.commuter picture{*/
+/*    margin-left: 5px;*/
+
+/*}*/

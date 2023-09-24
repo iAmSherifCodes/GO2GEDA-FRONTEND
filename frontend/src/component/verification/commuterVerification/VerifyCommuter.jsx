@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import '../style/verifyCommuter.css'
+import {useNavigate} from "react-router-dom";
 
 const VerifyCommuter = ()=>{
     const[address,setAddress]=useState("")
@@ -10,16 +12,20 @@ const VerifyCommuter = ()=>{
         const file = e.target.file[0]
         setProfilePicture(file)
     }
+    const navigate = useNavigate();
     const handleSubmit=(e)=>{
         e.preventDefault()
+        alert(" Verification successful")
         console.log(address)
         console.log(profilePicture)
+        navigate('/verify');
     }
     return(
         <div className="main-com">
-            <h2>Commuter Verification</h2>
+            <div className="commuter-verify-innerConatiner">
+                <h2>Welcome</h2>
             <form onSubmit={handleSubmit}>
-                <div className="commuter-verify-innerConatiner">
+                <div  className="add">
                     <label htmlFor="address">Address:</label>
                     <input
                         type="text"
@@ -29,31 +35,31 @@ const VerifyCommuter = ()=>{
                         required
                     />
                 </div>
-                <div className="commuter picture">
-                    <label htmlFor="profilePic">Profile Picture:</label>
+                <div className="commuterpicture">
+                    <label htmlFor="profilePic">Profile Picture</label>
                     <input
                         type="file"
                         id="profilePic"
                         accept="image/*"
                         onChange={handleProfilePicture}/>
-                            </div>
-                <div className="state-addres">
+                </div>
+                <div className="sta-addres">
                     <label>State</label>
                     <input type="state" name="state"  required/>
                 </div>
-                <div className="local-addres">
+                <div className="loc-addres">
                     <label>Local Gov</label>
                     <input type="localGoverment" name="localGoverment" required/>
                 </div>
                 <div className="form-group">
-                    <div className="submitbasic">
-                        <button type="submit">Submit</button>
+                    <div className="submitverify">
+                        <button type="submit">Verify</button>
                     </div>
                 </div>
 
-                         </form>
+            </form>
             {/*{verificationStatus && <p>{verificationStatus}</p>}*/}
-
+            </div>
         </div>
     )
 }

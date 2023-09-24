@@ -22,8 +22,8 @@ function VehicleInformation() {
     const handleSubmit = (e) => {
         e.preventDefault();
         alert("successful")
-        navigate('/verify');
         console.log(formData)
+        navigate('/verify');
 
 
     };
