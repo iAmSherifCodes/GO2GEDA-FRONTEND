@@ -6,9 +6,17 @@
 }
 .loginForm{
     /* background-color: #809BCE; */
-    background-color: white;
-    margin-top: 50px;
+    /* background-color: white;
+    margin-top: 30px;
     margin-left: 290px;
+    height: 600px;
+    width: 900px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.758);
+    display: flex;
+    justify-content: space-between; */
+    background-color: white;
+    margin-top: 30px;
+    margin-left: 270px;
     height: 600px;
     width: 900px;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.758);
@@ -19,12 +27,14 @@
 
 .loginPicture{
     height:600px;
+    width: 400px;
+    margin-left: -2px;
+    margin-top: 0px;
 }
 .form{
-    margin-right:   150px;
+    margin-right:   100px;
 }
 .input{
-    /* margin-top: 25px; */
     height: 50px;
     width: 300px;
     border-radius: 8px;
@@ -39,4 +49,13 @@
     border-radius: 5px;
     border: none;
     
+}
+.heading{
+    margin-left: 5px;
+    font-size: 30px;
+    line-height: 60px;
+}
+.heading2{
+    margin-left: 5px;
+    margin-bottom: 45px;
 }

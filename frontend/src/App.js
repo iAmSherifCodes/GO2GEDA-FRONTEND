@@ -16,6 +16,8 @@ import BasicInformation from "./component/verification/BasicInformation";
 import DriverPhoto from "./component/verification/DriverPhoto";
 import DriverLicence from "./component/verification/DriverLicence";
 import VehicleInformation from "./component/verification/VehicleInformation";
+import CreateTrip from "./component/createTrip/CreateTrip";
+import CommuterDashBoard from "./component/commuterDashboard/CommuterDashBoard";
 
 
 
@@ -23,12 +25,15 @@ function App() {
   return (
     <BrowserRouter>
     <div>
-        <NavBar/>
+        {/* <NavBar/> */}
         <Routes>
           <Route exact path="/" Component={HomePage} />
           <Route path="/sign-in" Component={SignIn} />
           <Route path="/sign-up" Component={SignUp} />
           <Route path="/view-trips" Component={ViewTrips} />
+          <Route path="/createTrip" Component={CreateTrip} />
+          <Route path="/commuter-dashboard" Component={CommuterDashBoard} />
+           
 
           <Route path="/profile" Component={ProfileInfo}/>
           <Route path="/sideBar" Component={SideBar}/>

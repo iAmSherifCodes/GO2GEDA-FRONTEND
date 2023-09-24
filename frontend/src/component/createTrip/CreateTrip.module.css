@@ -1,0 +1,29 @@
+.createTripForm{
+    background-color: whitesmoke;
+    margin-top: 50px; 
+    margin-right: 450px; 
+    height: 600px;
+    width: 350px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.758);
+    border-radius: 20px;
+    padding-left: 38px;
+}
+.input{
+    height: 50px;
+    width: 300px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+}
+.everything{
+    display: flex;
+    justify-content: space-between;
+    background-image: url(../driverDashboard/assests/driverdashboardImagebackground.webp);
+    background-repeat: no-repeat;
+    background-position: right; 
+    background-size: cover;
+}
+.heading{
+    font-size: 30px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+}

@@ -16,7 +16,7 @@
 }
 .anime-container{
     height: 200px;
-    
+
 }
 
 .first-step img{
@@ -60,7 +60,7 @@
 
 .info{
     display: flex;
-    align-items: center; 
+    align-items: center;
     padding: 10px;
     margin-top: 40px;
     width: 40%;
@@ -86,7 +86,7 @@ hr{
 }
 
 .fourth-step{
-    margin-bottom: 40px;    
+    margin-bottom: 40px;
     padding:30px;
     color: #8181EA;
     display: flex;
@@ -98,7 +98,7 @@ hr{
 
 .fourth-step p{
     border: 0px;
-    font-size: 1.9rem; 
+    font-size: 1.9rem;
 }
 
 .fourth-step h3{

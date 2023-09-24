@@ -30,8 +30,10 @@ const SignUp = () =>{
         <div className={classes.loginForm}>
             <img src={loginimage} alt="" className={classes.loginPicture}/>
             <div className={classes.form}>
-                <h1>SignUp</h1>
-                <p>have an account already? <a href="">Login</a></p>
+                
+                <h1 className={classes.heading}>SignUp</h1>
+                <p className={classes.heading2}>have an account already? <a href="">Login</a></p>
+                
                 <input type="text" placeholder="FirstName"name="firstName" onChange={CollectSignUpDetails} className={classes.input}></input> <br />
                 <input type="text" placeholder="LastName" name ="lastName"onChange={CollectSignUpDetails} className={classes.input}></input> <br/>
                 <input type="email" placeholder="Email" name="email" onChange={CollectSignUpDetails} className={classes.input}></input> <br/>

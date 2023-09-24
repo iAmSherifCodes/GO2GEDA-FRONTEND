@@ -14,8 +14,8 @@ const ProfileInfo = () =>{
     return(
         <>
     <div>
-        <img src={profile}alt=""className={classes.image}></img>
-        <h2>Welcome,{name}</h2>
+        <img src={profile}alt=""className={classes.image}></img> 
+        <h2 className={classes.greeting}>Welcome,{name}</h2>
     </div>
     </>
     )
