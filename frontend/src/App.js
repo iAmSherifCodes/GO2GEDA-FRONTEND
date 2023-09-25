@@ -28,7 +28,7 @@ function App() {
   return (
     <BrowserRouter>
     <div>
-        {/* <NavBar/> */}
+        <NavBar/>
         <Routes>
           <Route exact path="/" Component={HomePage} />
           <Route path="/sign-in" Component={SignIn} />

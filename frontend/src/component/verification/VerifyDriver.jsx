@@ -56,6 +56,7 @@ const VerifyDriver =()=>{
         
         </div>
       </div>
+      </div>
 
   );
     };  
