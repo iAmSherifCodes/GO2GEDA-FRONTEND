@@ -3,7 +3,7 @@ import { useState } from "react";
 import classes from "../signIn/SignIn.module.css"
 import loginimage from "../signIn/assests/loginPicture.svg"
 import axios from "axios";
-import { registerCommuter } from "../api/Api";
+// import { registerCommuter } from "../api/Api";
 
 
 const SignIn = () =>{
@@ -28,7 +28,7 @@ const SignIn = () =>{
             password: loginDetails.password,
         };
 
-        const response = await axios.post(registerCommuter, signInData);
+        // const response = await axios.post(registerCommuter, signInData);
 
         console.log(signInData)
     }

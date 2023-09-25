@@ -56,6 +56,7 @@
 }
 
 .second-step p{
+    margin-top: 40px;
     font-family: 'Open Sans';
     text-align: center;
     font-size: 1.4rem;
@@ -63,6 +64,7 @@
 }
 
 .second-step h3{
+    
     font-size: 2rem;
     color: #171FE7;
     font-family: 'Open Sans';
