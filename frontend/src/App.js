@@ -19,6 +19,9 @@ import VehicleInformation from "./component/verification/VehicleInformation";
 import CreateTrip from "./component/createTrip/CreateTrip";
 import CommuterDashBoard from "./component/commuterDashboard/CommuterDashBoard";
 
+import AccountInformation from "./component/verification/AccountInformation";
+import VerifyCommuter from "./component/verification/commuterVerification/VerifyCommuter";
+
 
 
 function App() {
@@ -44,6 +47,8 @@ function App() {
           <Route path="/licence" Component={DriverLicence} />
           <Route path="/vehicleInfo" Component={VehicleInformation} />
           <Route path="/sign-up" Component={SignUp} />
+          <Route path="/acctInfo" Component={AccountInformation}/>
+          <Route path="/verifyCommuter" Component={VerifyCommuter}/>
         </Routes>
         {/*<Footer />*/}
 

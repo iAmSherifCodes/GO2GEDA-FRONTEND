@@ -2,6 +2,10 @@ import { useState } from "react";
 // import axios from "axios";
 import classes from "../signIn/SignIn.module.css"
 import loginimage from "../signIn/assests/loginPicture.svg"
+import axios from "axios";
+// import { registerCommuter } from "../api/Api";
+
+
 const SignIn = () =>{
     const credentials = {
         email:"",
@@ -17,12 +21,14 @@ const SignIn = () =>{
             [e.target.name]: e.target.value,
         }));
     }
-    const handleSubmit = (event) =>{
+    const handleSubmit = async (event) =>{
         event.preventDefault();
         const signInData = {
             email: loginDetails.email,
             password: loginDetails.password,
         };
+
+        // const response = await axios.post(registerCommuter, signInData);
 
         console.log(signInData)
     }
