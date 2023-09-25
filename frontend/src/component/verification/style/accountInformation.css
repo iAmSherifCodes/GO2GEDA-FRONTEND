@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+}
+.acctinfomaincontain{
+    background-color: rgb(172, 172, 255);
+    height: 900px;
+    padding-top: 30px;
+}
+.acct-main{
+    border-radius: 10px;
+    margin-top: 80px;
+    background-color: white;
+    margin-left:400px ;
+    border: 1px solid #DADCE0;
+    /*margin: auto;*/
+    width: 600px;
+    height: 300px;
+    box-shadow: 0 29px 50px -12px rgba(0, 0, 0, 0.758);
+    padding-top: 50px
+}
+.accountName{
+    margin-left: 30px;
+}
+.accountName label{
+    margin-left: 22px;
+    font-size: 17px
+}
+.accountName input{
+    height: 30px;
+    width: 290px;
+    margin-left: 10px;
+}
+.bank-verif{
+    margin-left: 30px;
+}
+.bank-verif label{
+    margin-left: 25px;
+    font-size: 17px
+}
+.bank-verif input {
+    height: 30px;
+    width: 290px;
+    margin-left: 24px;
+}
+.bank-name label{
+    margin-left: 22px;
+    font-size: 17px
+}
+.bank-name input{
+    height: 30px;
+    width: 290px;
+    margin-left: 24px;
+
+}
+.bank-name {
+    margin-left: 36px;
+}
+.accttxt h3{
+    margin-left: 200px;
+}
+.submitbasicAcc{
+    margin-left: 100px;
+}
+.submitbasicAcc  button{
+    margin-top: 25px;
+    width: 400px;
+    height: 40px;
+    background-color: rgb(16, 16, 227);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
