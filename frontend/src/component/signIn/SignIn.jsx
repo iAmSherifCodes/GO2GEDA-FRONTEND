@@ -38,8 +38,8 @@ const SignIn = () =>{
         <div className={classes.loginForm}>
             <img src={loginimage} alt="" className={classes.loginPicture}/>
             <div className={classes.form}>
-                <h1>Login</h1>
-                <p>don't have an account yet? <a href="">signUp</a></p>
+                <h1 className={classes.heading}>Login</h1>
+                <p className={classes.heading2}>don't have an account yet? <a href="">signUp</a></p>
                 <input type="email" placeholder="Email" name="email" onChange={CollectLoginDetails} className={classes.email}></input> <br />
                 <input type="password" placeholder="Password" name="password" onChange={CollectLoginDetails} className={classes.password}></input> <br/>
                 <button className={classes.submitLoginDetails} onClick={handleSubmit}>login</button>
