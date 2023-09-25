@@ -4,7 +4,7 @@ import "./style//verifyDriver.css";
 import React from "react";
 
 
-const VerifyDriver= ()=>{
+const VerifyDriver =()=>{
     return(
         <div className="main">
         <div className="main-container">
@@ -53,10 +53,11 @@ const VerifyDriver= ()=>{
                          <button type="submit">Done</button>
                      </div>
                  </uL>
-             </div>
+        
         </div>
       </div>
-
+</div>
   );
-};
+    };  
+
 export default VerifyDriver;
