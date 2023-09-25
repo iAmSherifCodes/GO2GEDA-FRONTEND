@@ -3,7 +3,7 @@ import { useState } from "react";
 import classes from "../signIn/SignIn.module.css"
 import loginimage from "../signIn/assests/loginPicture.svg"
 import axios from "axios";
-import { registerCommuter } from "../api/Api";
+// import { registerCommuter } from "../api/Api";
 
 
 const SignIn = () =>{
@@ -28,7 +28,7 @@ const SignIn = () =>{
             password: loginDetails.password,
         };
 
-        const response = await axios.post(registerCommuter, signInData);
+        // const response = await axios.post(registerCommuter, signInData);
 
         console.log(signInData)
     }
@@ -38,8 +38,8 @@ const SignIn = () =>{
         <div className={classes.loginForm}>
             <img src={loginimage} alt="" className={classes.loginPicture}/>
             <div className={classes.form}>
-                <h1>Login</h1>
-                <p>don't have an account yet? <a href="">signUp</a></p>
+                <h1 className={classes.heading}>Login</h1>
+                <p className={classes.heading2}>don't have an account yet? <a href="">signUp</a></p>
                 <input type="email" placeholder="Email" name="email" onChange={CollectLoginDetails} className={classes.email}></input> <br />
                 <input type="password" placeholder="Password" name="password" onChange={CollectLoginDetails} className={classes.password}></input> <br/>
                 <button className={classes.submitLoginDetails} onClick={handleSubmit}>login</button>

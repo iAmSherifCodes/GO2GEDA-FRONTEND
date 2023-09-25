@@ -1,8 +1,7 @@
-/* @media (min-width: 1920px) and (min-height: 1080px){ */
+
     .everything{
         padding-top: 30px;
         background-color: rgb(172, 172, 255);
-        /* height: 100%; */
         width: 100%;
     }
     .Header{
@@ -33,34 +32,35 @@
     }
     .loginForm{
         background-color: white;
-        margin-top: 50px;
-        margin-left: 450px;
+        margin-top: 30px;
+        margin-left: 270px;
         height: 600px;
         width: 900px;
         box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.758);
         display: flex;
         justify-content: space-between;
-        
     }
     
     .loginPicture{
         height:600px;
+    width: 400px;
+    margin-left: -2px;
+    margin-top: 0px;
     }
     .form{
         margin-right:   150px;
     }
     .password{
-        margin-top: 25px;
         height: 50px;
-        width: 300px;
-        border-radius: 8px;
-        margin-bottom: 25px;
+    width: 300px;
+    border-radius: 8px;
+    margin-bottom: 18px;
     }
     .email{
         height: 50px;
-        width: 300px;
-        border-radius: 8px;
-        margin-bottom: 35px;
+    width: 300px;
+    border-radius: 8px;
+    margin-bottom: 18px;
     }
     .submitLoginDetails{
         width: 300px;
@@ -72,6 +72,15 @@
     }
     .password ::placeholder{
        margin-right: 40px;
+    }
+    .heading{
+        margin-left: 5px;
+        font-size: 30px;
+        line-height: 60px;
+    }
+    .heading2{
+        margin-left: 5px;
+        margin-bottom: 45px;
     }
   /* } */
   

@@ -1,5 +1,5 @@
-const base_url = "localhost/api/go2geda"
+const base_url = "localhost/api/v1/go2geda"
 
 
 
-export const registerCommuter = `${base_url}/register-commuter`
+export const registerDriverCommuter = `${base_url}/register-commuter`
