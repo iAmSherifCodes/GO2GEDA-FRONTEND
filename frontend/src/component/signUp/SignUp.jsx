@@ -33,9 +33,9 @@ const SignUp = () => {
       confirmPassword: SignInDetails.confirmPassword,
     };
 
-    const response = await axios.post(
-      "http://localhost:8080/api/v1/go2geda//register-driver"
-    );
+    const response = await axios
+    .post("http://localhost:8080/api/v1/go2geda/register-driver", signUpData);
+  
 
     console.log(signUpData);
     // console.log(SignInDetails)

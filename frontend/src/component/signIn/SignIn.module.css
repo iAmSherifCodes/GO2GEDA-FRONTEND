@@ -8,9 +8,16 @@
         background-color: rgb(129, 129, 234);
         display: flex;
         color: white;
-        justify-content: space-between;
+        justify-content: space-around;
         width: 100%;
         margin-bottom: 0px;
+        height: 90px;
+        align-items: center;
+        
+    }
+
+    .Header h2{
+font-size: 2rem;
     }
     
     .navBar{
@@ -20,15 +27,19 @@
         color:white;
         text-decoration: none;
         list-style: none;
+        align-items: center;
+        
     }
+
     .loginButton{
         margin-top: 10px;
-        width: 180px;
-        height: 60px;
-        border-radius: 10px;
+        width: 130px;
+        height: 45px;
+        border-radius: 17px;
         border: none;
         font-size: 20px;
         margin-right: 60px;
+        color: rgb(129, 129, 234);
     }
     .loginForm{
         background-color: white;

@@ -4,7 +4,7 @@ const NavBar = () =>{
     return(
         <>
         <div className= {classes.Header}>
-        <h3>Go2Geda</h3>
+        <h2>Go2Geda</h2>
         <div className={classes.navBar}>
             <a href="/">Home</a>
             <a href="faq">FAQ</a>
