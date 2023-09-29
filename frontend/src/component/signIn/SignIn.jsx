@@ -1,51 +1,76 @@
 import { useState } from "react";
 // import axios from "axios";
-import classes from "../signIn/SignIn.module.css"
-import loginimage from "../signIn/assests/loginPicture.svg"
+import illustration from "../signIn/assests/login.jpg";
 import axios from "axios";
 // import { registerCommuter } from "../api/Api";
 
-
-const SignIn = () =>{
-    const credentials = {
-        email:"",
-        password:"",
-    }
-    const [loginDetails, setLoginDetails] = useState(credentials)
-
-    const CollectLoginDetails =async (e) =>{
+const SignIn = () => {
+    const initialValue = {
+        email: "",
+        password: "",
+      };
+    
+      const [details, setDetails] = useState(initialValue);
+    
+      const handleChange = async (e) => {
         e.preventDefault();
-
-        setLoginDetails((state)=>({
-            ...state,
-            [e.target.name]: e.target.value,
+    
+        setDetails((state) => ({
+          ...state,
+          [e.target.name]: e.target.value,
         }));
+      };
+    
+    
+    const handleSubmit = async (event) => {
+      event.preventDefault();
+      const data = {
+        email: details.email,
+        password: details.password,
+      };
+    
+      const response = await axios.post("http://localhost:8080/api/v1/go2geda/login", data)
+    
+      console.log(data);
+    
     }
-    const handleSubmit = async (event) =>{
-        event.preventDefault();
-        const signInData = {
-            email: loginDetails.email,
-            password: loginDetails.password,
-        };
+  return (
+    <>
+      <div className="dcontainer">
+        <div className="dcard">
+          <div className="dleftSide">
+            <img src={illustration} alt="DriverIllustration" />
+          </div>
+          <div className="drightSide">
+            <h4>Welcome Back</h4>
+            <h5>Sign in to your account</h5>
+            <form className="forms">
+              <input
+                type="text"
+                name="email"
+                placeholder="Email"
+                onChange={handleChange}
+              />
+              <input
+                type="text"
+                name="password"
+                placeholder="Password"
+                onChange={handleChange}
+              />
+            </form>
 
-        // const response = await axios.post(registerCommuter, signInData);
-
-        console.log(signInData)
-    }
-    return(
-        <div className={classes.everything}>
-
-        <div className={classes.loginForm}>
-            <img src={loginimage} alt="" className={classes.loginPicture}/>
-            <div className={classes.form}>
-                <h1 className={classes.heading}>Login</h1>
-                <p className={classes.heading2}>don't have an account yet? <a href="">signUp</a></p>
-                <input type="email" placeholder="Email" name="email" onChange={CollectLoginDetails} className={classes.email}></input> <br />
-                <input type="password" placeholder="Password" name="password" onChange={CollectLoginDetails} className={classes.password}></input> <br/>
-                <button className={classes.submitLoginDetails} onClick={handleSubmit}>login</button>
+            <div className="dbelow-forms">
+              <p>Don't have an account yet?</p>
+              <a href="/">Sign Up</a>
             </div>
+
+            <button className="dsign-ups" onClick={handleSubmit}>
+              Login
+            </button>
+          </div>
         </div>
-        </div>
-    )
-}
+      </div>
+    </>
+  );
+};
 export default SignIn;

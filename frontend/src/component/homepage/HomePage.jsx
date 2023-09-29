@@ -56,10 +56,10 @@ const HomePage = () => {
           <p>Discover new connections, save on costs, and travel in comfort.</p>
           <div className="btn">
             <button className="button">
-              <a href="join-to-ride">Join to ride</a>
+              <a href="/commuter-sign-up">Join to ride</a>
             </button>
             <button className="button">
-              <a href="join-to-ride">Join to drive</a>
+              <a href="driver-sign-up">Join to drive</a>
             </button>
           </div>
         </div>

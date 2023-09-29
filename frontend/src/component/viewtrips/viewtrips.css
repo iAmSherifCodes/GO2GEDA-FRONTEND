@@ -1,0 +1,34 @@
+.card{
+    width: 350px;
+    height: 110px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+}
+
+img{
+    height: 30px;
+    width: 30px;
+    border-radius: 25px;
+}
+
+.trip-details{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+}
+
+.card h5{
+    border-right: 30px;
+}
+
+.card p{
+    margin: 0px;
+}
+
+.card button{
+    color: rgb(233, 221, 199);
+    background-color: blueviolet;
+    margin: 0px;
+}
