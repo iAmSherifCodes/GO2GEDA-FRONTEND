@@ -3,7 +3,6 @@ import Footer from "./component/footer/footer";
 import HomePage from "./component/homepage/HomePage";
 import SignIn from "./component/signIn/SignIn";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import SignUp from "./component/signUp/SignUp";
 
 
 import ViewTrips from "./component/viewtrips/viewtrips";
@@ -25,6 +24,7 @@ import DriverSignUp from "./component/driverSignUp/DriverSignUp";
 import AdminLogin from "./component/AdminLoginPage/AdminLogin.jsx";
 import Faq from "./component/faqestion/Faq";
 import JoinToPartner from "./component/joinToPartner/JoinToPartner";
+import CommuterSignUp from "./component/commuterSignUp/CommuterSignUp";
 
 
 
@@ -36,7 +36,7 @@ function App() {
         <Routes>
           <Route exact path="/" Component={HomePage} />
           <Route path="/sign-in" Component={SignIn} />
-          <Route path="/sign-up" Component={SignUp} />
+          <Route path="/commuter-sign-up" Component={CommuterSignUp} />
           <Route path="/view-trips" Component={ViewTrips} />
           <Route path="/createTrip" Component={CreateTrip} />
           <Route path="/commuter-dashboard" Component={CommuterDashBoard} />
@@ -50,7 +50,6 @@ function App() {
           <Route path="/drive" Component={DriverPhoto} />
           <Route path="/licence" Component={DriverLicence} />
           <Route path="/vehicleInfo" Component={VehicleInformation} />
-          <Route path="/sign-up" Component={SignUp} />
           <Route path="/acctInfo" Component={AccountInformation}/>
           <Route path="/verifyCommuter" Component={VerifyCommuter}/>
           <Route path="/adminlogin" Component={AdminLogin}/>

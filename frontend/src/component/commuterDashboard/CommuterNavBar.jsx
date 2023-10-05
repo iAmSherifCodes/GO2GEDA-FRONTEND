@@ -8,7 +8,7 @@ const CommuterNavBar = () =>{
         <div className={classes.navBar}>
             <a href="/">Home</a>
             <a href="faq">FAQ</a>
-            <a href="/join-drive">Join to drive</a>
+            <a href="/driver-sign-up">Join to drive</a>
         </div>
             <button className={classes.loginButton}>Log out</button>
         </div> 

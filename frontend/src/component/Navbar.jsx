@@ -4,15 +4,15 @@ const NavBar = () =>{
     return(
         <>
         <div className= {classes.Header}>
-        <h2>Go2Geda</h2>
+        <h2><a href="/">Go2Geda</a></h2>
         <div className={classes.navBar}>
             <a href="/">Home</a>
             <a href="faq">FAQ</a>
-            <a href="/join-ride">Join to ride</a>
-            <a href="/join-drive">Join to drive</a>
+            <a href="/commuter-sign-up">Join to ride</a>
+            <a href="/driver-sign-up">Join to drive</a>
             <a href="/join-partner">Join to partner</a>
         </div>
-        <button className={classes.loginButton}>Login</button>
+        <button className={classes.loginButton}><a href="/sign-in">Login</a></button>
         </div> 
 
         </>

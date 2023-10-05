@@ -8,7 +8,7 @@ import CommuterNavBar from "./CommuterNavBar";
 const CommuterDashBoard = () =>{
     
     return(<div>
-        <CommuterNavBar></CommuterNavBar>
+        {/* <CommuterNavBar></CommuterNavBar> */}
         <div className={classes.main}>
             <CommuterSideBar></CommuterSideBar>
           <div>

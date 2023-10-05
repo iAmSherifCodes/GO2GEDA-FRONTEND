@@ -16,9 +16,13 @@
         
     }
 
-    .Header h2{
+h2{
 font-size: 2rem;
-    }
+}
+h2 a{
+text-decoration: none;
+color: white;
+}
     
     .navBar{
         display: flex;
@@ -39,7 +43,12 @@ font-size: 2rem;
         border: none;
         font-size: 20px;
         margin-right: 60px;
-        color: rgb(129, 129, 234);
+    }
+
+    .loginButton a{
+            text-decoration: none;
+            color: rgb(37, 37, 131);
+            
     }
     .loginForm{
         background-color: white;
