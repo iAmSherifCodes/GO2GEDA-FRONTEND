@@ -1,0 +1,46 @@
+.faq-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.faq-data{
+    width: 900px;
+    height: 300px;
+    margin-top: 40px;
+}
+h1{
+    margin-left: 250px;
+     margin-bottom: 30px; 
+    font-size: 1.8rem;
+    
+}
+.Question2{
+    font-size: large;
+    
+} 
+.Quest{
+    margin-bottom: 30px;
+    border: 0px solid rgb(67, 67, 156);
+    width: 900px;
+    height: auto;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color:white; 
+    background-color: rgb(140, 140, 241); 
+    border-radius: 10px;
+    /* background-color:  rgb(129, 129, 234); */
+       
+}
+
+.Quest summary{
+    font-size: 1.3rem; 
+    /* font-size: 1.4rem; */
+    margin-bottom: 10px;
+}
+.Quest p{
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+

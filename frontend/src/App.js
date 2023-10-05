@@ -22,6 +22,9 @@ import CommuterDashBoard from "./component/commuterDashboard/CommuterDashBoard";
 import AccountInformation from "./component/verification/AccountInformation";
 import VerifyCommuter from "./component/verification/commuterVerification/VerifyCommuter";
 import DriverSignUp from "./component/driverSignUp/DriverSignUp";
+import AdminLogin from "./component/AdminLoginPage/AdminLogin.jsx";
+import Faq from "./component/faqestion/Faq";
+import JoinToPartner from "./component/joinToPartner/JoinToPartner";
 
 
 
@@ -50,8 +53,10 @@ function App() {
           <Route path="/sign-up" Component={SignUp} />
           <Route path="/acctInfo" Component={AccountInformation}/>
           <Route path="/verifyCommuter" Component={VerifyCommuter}/>
-
+          <Route path="/adminlogin" Component={AdminLogin}/>
           <Route path="/driver-sign-up" Component={DriverSignUp} />
+          <Route path="/faq" Component={Faq} />
+          <Route path="/join-partner" Component={JoinToPartner} />
         </Routes>
         {/*<Footer />*/}
 
