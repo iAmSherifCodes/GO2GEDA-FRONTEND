@@ -1,0 +1,265 @@
+/* .container{
+    width: 100%;
+    background-color: rgb(220, 220, 220);
+    height: 100vh;
+} */
+
+.dashboard-container{
+    
+    /* height: 800px; */
+    display: flex;
+    font-family: "Open Sans"
+}
+
+.menu{
+    text-decoration: none;
+    display: flex;
+    font-size: 1.3rem;
+    align-items: center;
+    margin-top: 50px;
+    padding-left: 0px;
+}
+h5{
+    margin-left: 15px;
+}
+
+/* .menu img{
+    margin-right: 20px;
+} */
+
+.side-menu{
+    padding-top: 40px;
+    height: 840px;
+    width: 18%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 60px;
+    box-shadow: 0 0px 10px 2px rgba(0, 65, 216, 0.758);
+    background-color: aliceblue;
+}
+
+.side-menu h2{
+    font-size: 1.3rem;
+}
+
+.dashboard-navbar{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    padding: 10px 70px;
+    background-color: blue;
+    color: white;
+}
+.right-board{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    height: 840px;
+    background-color: aliceblue;
+    margin: 0px;
+    margin-left: 10px;
+}
+
+.top{
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    padding: 80px;
+    width: 1299px;
+}
+
+.left{
+    width: 400px;
+    height: 300px;
+    background-color: aliceblue;
+    box-shadow: 0 0px 5px 1px rgba(0, 65, 216, 0.758);
+    font-size: 1.3rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.middle{
+    width: 400px;
+    height: 300px;
+    background-color: aliceblue;
+    box-shadow: 0 0px 5px 1px rgba(0, 65, 216, 0.758);
+    font-size: 1.3rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.right{
+    width: 400px;
+    height: 300px;
+    background-color: aliceblue;
+    box-shadow: 0 0px 5px 1px rgba(0, 65, 216, 0.758);
+    font-size: 1.3rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+} 
+
+.bottom{
+    width: 1248px;
+    height: 408px;
+    margin-top: 4px;
+    background-color: aliceblue;
+    box-shadow: 0 0px 5px 1px rgba(0, 65, 216, 0.758);
+    font-size: 1.3rem;
+    border-radius: 15px;
+    margin-left: 99px;
+    padding: 10px 10px;
+}
+
+.no{
+    height: 98px;
+    padding: 0px 0px;
+    width: inherit;
+    border-radius: inherit;
+    border-end-end-radius: 0px;
+    background-color: blue;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center; 
+}
+
+.no h2{
+    font-size: 2rem;
+    margin-top: 12px;
+    margin-bottom: 0px;
+}
+
+.request{
+    height: 73px;
+    padding: 0px 0px;
+    width: inherit;
+    border-radius: inherit;
+    border-end-end-radius: 0px;
+    background-color: blue;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center; 
+}
+
+.request h2{
+        font-size: 2rem;
+        margin-top: 12px;
+}
+
+.wallet{
+    height: 98px;
+    padding: 0px 0px;
+    width: inherit;
+    border-radius: inherit;
+    border-end-end-radius: 0px;
+    background-color: blue;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center; 
+}
+
+.wallet h2{
+    font-size: 2rem;
+    margin-top: 12px;
+}
+
+.numberOfTrips{
+    display: flex;
+    height: inherit;
+    width: inherit;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0px;
+}
+.numberOfTrips p{
+    margin-left: 0px;
+    font-size: 3rem;
+    font-family: "Open Sans";
+}
+
+
+
+.card{
+    width: 380px;
+    height: 47px;
+    border-radius: inherit;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    padding: 4px 0px;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+    margin-top: 6px;
+}
+
+.checks{
+    display: flex;
+    flex-direction: row;
+    width: 55px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.avatar{
+    margin-left: 5px;
+}
+
+
+.Table table {
+    margin-top: 10px;
+    width: 1248px;;
+    height: inherit;
+}
+ 
+.Table th {
+    background-color: blue;
+    color: white;
+}
+ 
+.Table td {
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+.Table table tr:nth-child(even) {
+    background-color: #e6e3f5;
+}
+.Table table tr:nth-child(odd) {
+    background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        margin-top: 10px;
+        width: 195px;
+        font-size: 1.4rem;
+        /* max-width: 100%; */
+    }
+    
+    .side-menu {  
+        /* max-width: 100%;       */
+        width: 100%;
+        padding: 70px;
+        height: auto; 
+    }
+    
+    .side-menu h2 {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+

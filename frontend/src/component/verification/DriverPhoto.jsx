@@ -1,9 +1,42 @@
-import React, {useState} from "react";
+import React, {useRef, useState} from "react";
 import {Form, useNavigate} from "react-router-dom";
 import headshot from '../asset/headshot2.jpg'
 import './style/driverPhoto.css'
 import VehicleCss from "./style/vehicleInformation.module.css";
 const DriverPhoto =()=>{
+
+        const webcamRef = useRef(null);
+        const [imgSrc, setImgSrc] = useState(null);
+      
+        const capture = React.useCallback(() => {
+          const imageSrc = webcamRef.current.getScreenshot();
+          setImgSrc(imageSrc);
+        }, [webcamRef, setImgSrc]);
+      
+        // return (
+        //   <>
+    //         <Webcam
+    //           audio={false}
+    //           ref={webcamRef}
+    //           screenshotFormat="image/jpeg"
+    //         />
+    //         <button onClick={capture}>Capture photo</button>
+    //         {imgSrc && (
+    //           <img
+    //             src={imgSrc}
+    //           />
+    //         )}
+    //       {/* </>
+    //     ); */}
+    //   };
+
+
+
+
+
+
+
+
     const initialState = {
         profilePicture: null,
     }
@@ -19,8 +52,6 @@ const DriverPhoto =()=>{
         alert("successful")
         navigate('/verify');
         console.log(verifyForm)
-
-
     };
 
 

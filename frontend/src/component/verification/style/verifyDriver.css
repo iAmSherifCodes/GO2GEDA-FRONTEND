@@ -5,12 +5,15 @@
     background-color: rgb(172, 172, 255);
     height: 100.3vh;
     padding-top: 50px;
+    /* display: flex;
+    justify-content: center; */
 }
 
 .main-container {
     background-color:white;
     width: 550px;
-    margin-left: 400px;
+    margin-top: 60px;
+    margin-left: 800px;
     /*margin-top: 30px;*/
     /*height:650px;*/
     /*margin-bottom: 90px;*/
@@ -24,7 +27,7 @@
     /*padding:  30px;*/
     outline: none;
     /*border: 70px;*/
-    padding-top: 20px;
+    padding-top: 30px;
     /*margin: 60px;*/
     box-sizing: border-box;
     /*font-family: UberMove, UberMoveText, 'Helvetica Neue', Helvetica, sans-serif;*/
