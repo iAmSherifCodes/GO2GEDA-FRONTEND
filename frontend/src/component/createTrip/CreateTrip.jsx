@@ -1,12 +1,16 @@
 import { useState } from "react";
-import classes from "../createTrip/CreateTrip.css";
+import "../createTrip/CreateTrip.css";
 import axios from "axios";
+import {DateTimePicker} from "react-datetime-picker";
+import 'react-datetime-picker/dist/DateTimePicker.css';
+import 'react-calendar/dist/Calendar.css';
+import 'react-clock/dist/Clock.css';
 
 const CreateTrip = () => {
   const initialObj = {
     to: "",
     numberOfSeats: "",
-    pickUpTime: "",
+    pickUpTime: new Date(),
     from: "",
     pricePerSeat: "",
     email: "awofiranyesherif4@gmail.com",
@@ -22,6 +26,9 @@ const CreateTrip = () => {
     }));
   };
 
+  const[dateValue, setDateValue]= useState(new Date())
+  console.log(dateValue.toLocaleString())
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     const data = {
@@ -29,18 +36,18 @@ const CreateTrip = () => {
       numberOfSeats: createTripData.numberOfSeats,
       from: createTripData.from,
       pricePerSeat: createTripData.pricePerSeat,
-      pickUpTime: createTripData.pickUpTime,
+      pickUpTime: dateValue.toLocaleString(),
       email: "awofiranyesherif4@gmail.com",
     };
 
-    console.log(createTripData);
+    console.log(data);
 
     const response = await axios.post(
       "http://localhost:8080/trip/createTrip",
       data
     );
     console.log(response === 200);
-    // setCreateTripData((prev) => [...prev, response]);
+
 
     console.log(data);
   };
@@ -85,13 +92,12 @@ const CreateTrip = () => {
             placeholder="Price Per Seat"
           />
         </div>
-        <div className="header">
+        <div >
           <h3>Start Time</h3>
-          <input
-            type="text"
-            
+          < DateTimePicker
+            minDate= {new Date()}
             name="pickUpTime"
-            onChange={handleChange}
+            onChange={setDateValue}
             placeholder="Start Time"
             required
           />
