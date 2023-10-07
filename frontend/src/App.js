@@ -20,6 +20,9 @@ import CreateTrip from "./component/createTrip/CreateTrip";
 import AccountInformation from "./component/verification/AccountInformation";
 import VerifyCommuter from "./component/verification/commuterVerification/VerifyCommuter";
 import DriverSignUp from "./component/driverSignUp/DriverSignUp";
+import AdminLogin from "./component/AdminLoginPage/AdminLogin.jsx";
+import Faq from "./component/faqestion/Faq";
+import JoinToPartner from "./component/joinToPartner/JoinToPartner";
 import CommuterSignUp from "./component/commuterSignUp/CommuterSignUp";
 import DriverDashboard from "./component/dDashboard/DriverDashboard";
 import BookingRequest from "./component/bookingRequest/BookingRequest";
@@ -50,6 +53,12 @@ function App() {
           <Route path="/drive" Component={DriverPhoto} />
           <Route path="/licence" Component={DriverLicence} />
           <Route path="/vehicleInfo" Component={VehicleInformation} />
+          <Route path="/acctInfo" Component={AccountInformation}/>
+          <Route path="/verifyCommuter" Component={VerifyCommuter}/>
+          <Route path="/adminlogin" Component={AdminLogin}/>
+          <Route path="/driver-sign-up" Component={DriverSignUp} />
+          <Route path="/faq" Component={Faq} />
+          <Route path="/join-partner" Component={JoinToPartner} />
           <Route path="/acctInfo" Component={AccountInformation} />
           <Route path="/verifyCommuter" Component={VerifyCommuter} />
 

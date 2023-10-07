@@ -1,0 +1,67 @@
+.joinPart-box{
+    display: flex;
+    
+}
+.textPage{
+    height: 472px;
+    width: 753px;
+    /* border: 5px solid black; */
+    padding: 20px 83px; 
+   
+}
+
+
+h1{
+    margin-left: 100px;
+    margin-bottom: 49px;
+    font-size: 2rem;
+    
+}
+.joinUs-form{
+    margin-top: 20px; 
+    width: 450px;
+    display: flex;
+    /* justify-content: space-between; */
+    /* border: 1px solid red; */
+    margin-left: 35%;
+}
+.sub{
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    /* align-items: center; */
+    
+}
+.textPage p{
+    text-align: center;
+
+}
+.joinUs-form button{
+    background-color:  rgb(140, 140, 241);
+    color: white; 
+    border: none;
+    height: 30px;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+.joinUs-form input{
+    width: 300px;
+    height: 25px;
+    border-radius: 4px;
+    
+}
+::placeholder{
+    padding: 10px 10px;
+
+}
+.DivP{
+    margin-top: 20px;
+}
+.invest img{
+    width: 400px; 
+     height: 600px; 
+}
+
+
+
+
