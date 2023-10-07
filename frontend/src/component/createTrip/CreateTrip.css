@@ -1,0 +1,39 @@
+.createTripContainer{
+    display: flex;
+    /* margin-left: 10px; */
+}
+
+hr{
+    width: 100px;
+    color: #8181AE
+}
+
+.createTripForm{
+padding: 20px 20px;
+}
+
+
+.header{
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    justify-content: space-evenly;
+}
+
+.header input{
+    height: 40px;
+    /* border-radius: 8px; */
+}
+
+::placeholder{
+    padding: 15px 15px;
+    color: rgb(156, 156, 255);
+}
+
+button{
+    height: 50px;
+    width: 100px;
+    color: whitesmoke;
+    background-color: #8181AE;
+    border: 0px;
+}

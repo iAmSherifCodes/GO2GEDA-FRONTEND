@@ -5,17 +5,22 @@ import group from "../homepage/assets/friends.png";
 import partner from "../homepage/assets/partnership.png";
 import anime from "../homepage/assets/anime.json";
 import Lottie from "lottie-react";
+import NavBar from "../Navbar";
 
 const HomePage = () => {
-
   return (
     <>
+    <NavBar/>
       <div className="container">
         <div className="first-step">
           <div className="text">
-          <h3>Welcome to <span style={{color: "blue"}}>Go2Geda</span></h3>
-          <h4>Transportation made easy.</h4>
-          <h4 id="ensure">Ensuring comfortable and affordable transportation</h4>
+            <h3>
+              Welcome to <span style={{ color: "blue" }}>Go2Geda</span>
+            </h3>
+            <h4>Transportation made easy.</h4>
+            <h4 id="ensure">
+              Ensuring comfortable and affordable transportation
+            </h4>
           </div>
           <Lottie className="anime-container" animationData={anime}></Lottie>
         </div>

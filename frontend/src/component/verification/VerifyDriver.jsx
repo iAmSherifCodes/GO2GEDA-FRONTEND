@@ -1,14 +1,21 @@
 // import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./style//verifyDriver.css";
 import React from "react";
 
 
-const VerifyDriver =()=>{
+const VerifyDriver =()=>{ 
+    const navigate = useNavigate();
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        alert("successful")
+        navigate('/driver-dashboard');
+        // console.log(verifyForm)
+    };
     return(
         <div className="main">
         <div className="main-container">
-
+            <form onSubmit={handleSubmit}>
             <div className="welcom">
                 <h1>Welcome,</h1>
                     <h3 id="regd">Required steps</h3>
@@ -55,6 +62,7 @@ const VerifyDriver =()=>{
                  </uL>
         
         </div>
+        </form>
       </div>
       </div>
 

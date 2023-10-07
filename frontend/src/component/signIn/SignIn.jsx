@@ -3,6 +3,8 @@ import { useState } from "react";
 import illustration from "../signIn/assests/login.jpg";
 import axios from "axios";
 // import { registerCommuter } from "../api/Api";
+import {IoMdArrowRoundBack} from "react-icons/io"
+import { Link } from "react-router-dom";
 
 const SignIn = () => {
     const initialValue = {
@@ -38,13 +40,16 @@ const SignIn = () => {
     <>
       <div className="dcontainer">
         <div className="dcard">
+        <Link to="/" className="iom">
+              < IoMdArrowRoundBack size="30px" />
+            </Link>
           <div className="dleftSide">
             <img src={illustration} alt="DriverIllustration" />
           </div>
           <div className="drightSide">
             <h4>Welcome Back</h4>
             <h5>Sign in to your account</h5>
-            <form className="forms">
+            <form className="dforms">
               <input
                 type="text"
                 name="email"

@@ -2,6 +2,8 @@ import { useState } from "react";
 import "../driverSignUp/DriverSignUp.css";
 import image from "../driverSignUp/illustration.jpg";
 import axios from "axios";
+import {IoMdArrowRoundBack} from "react-icons/io"
+import { Link } from "react-router-dom";
 
 const DriverSignUp = () => {
   const initialValue = {
@@ -33,8 +35,18 @@ const handleSubmit = async (event) => {
     phoneNumber: details.phoneNumber,
     password: details.password,
   };
-
-  const response = await axios.post("http://localhost:8080/api/v1/go2geda/register-driver", data)
+  try{
+    const response = await axios.post
+    ("http://localhost:8080/api/v1/go2geda/driver/registerDriver", data);
+    console.log(data);
+    console.log(response.data)
+      if(response.data.error==="Email already exists"){
+      }else{
+        alert("REGISTRATION SUCCESFUL")
+      }
+  }catch(error){
+    console.log("An error occured",error)
+  }
 
   console.log(data);
 
@@ -43,14 +55,18 @@ const handleSubmit = async (event) => {
   return (
     <>
       <div className="dcontainer">
+        
         <div className="dcard">
+          <Link to="/" className="iom">
+              < IoMdArrowRoundBack size="30px" />
+            </Link>
           <div className="dleftSide">
             <img src={image} alt="DriverIllustration" />
           </div>
           <div className="drightSide">
             <h4>Become a driver</h4>
             <h5>Sign up to drive</h5>
-            <form className="forms">
+            <form className="dforms">
               <input
                 type="text"
                 name="firstName"

@@ -1,0 +1,50 @@
+.history{
+    display: flex;
+    flex-direction: column;
+
+    width: 1248px;
+    height: 568px;
+    margin-top: 80px;
+    background-color: aliceblue;
+    box-shadow: 0 0px 5px 1px rgba(0, 65, 216, 0.758);
+    font-size: 1.3rem;
+    border-radius: 15px;
+    margin-left: 99px;
+    padding: 10px 10px;
+}
+
+/* .history h2{
+    text-align: center;
+} */
+
+
+.dTable{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dTable table{
+    margin-top: 10px;
+    width: 1248px;;
+    height: inherit;
+}
+ 
+.dTable th {
+    background-color: blue;
+    color: white;
+}
+ 
+.dTable td {
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+.dTable table tr:nth-child(even) {
+    background-color: #e6e3f5;
+}
+.dTable table tr:nth-child(odd) {
+    background-color: white;
+}
