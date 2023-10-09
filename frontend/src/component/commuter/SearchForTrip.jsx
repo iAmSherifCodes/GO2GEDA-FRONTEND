@@ -5,23 +5,27 @@ import Avatar from "react-avatar";
 import axios from "axios";
 
 const SearchForTrip = () => {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [destination, setDestination] = useState('');
+  const [pickupLocation, setPickupLocation] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSearchInputChange = (e) => {
-    e.preventDefault();
-    setSearchQuery(e.target.value);
+  const handleDestinationChange = (e) => {
+    setDestination(e.target.value);
+  };
+
+  const handlePickupLocationChange = (e) => {
+    setPickupLocation(e.target.value);
   };
 
   const handleSearchButtonClick = () => {
-    if (!searchQuery) {
+    if (!destination && !pickupLocation) {
       return;
     }
 
     setIsLoading(true);
 
-    fetch(`http://localhost:8080/trip/searchByPickup/${searchQuery}`)
+    fetch(`http://localhost:8080/trip/searchByPickup/${destination}`)
       .then((response) => response.json())
       .then((data) => {
         setSearchResults(data);
@@ -34,6 +38,11 @@ const SearchForTrip = () => {
       });
   };
 
+  const handleTripRequest = () =>{
+    // const request = axios.post("http://localhost:8080/trip/bookTrip", )
+    // <BookingRequest />
+  }
+
   return (
     <>
       <div className="container">
@@ -42,14 +51,14 @@ const SearchForTrip = () => {
           <br />
           <div className="search-bar">
             <input
-              placeholder="Enter your trip pick up"
-              value={searchQuery}
-              onChange={handleSearchInputChange}
+              placeholder="Enter pick-up location"
+              value={pickupLocation}
+              onChange={handlePickupLocationChange}
             />
             <input
-              placeholder="Enter your trip destination"
-              value={searchQuery}
-              onChange={handleSearchInputChange}
+              placeholder="Enter destination"
+              value={destination}
+              onChange={handleDestinationChange}
             />
             <button onClick={handleSearchButtonClick} disabled={isLoading}>
               <HiOutlineSearch />
@@ -63,8 +72,10 @@ const SearchForTrip = () => {
                 <p>Loading...</p>
               ) : searchResults.length > 0 ? (
                 <div className="card-list">
+                  <h4>Available Trips</h4>
                   {searchResults.map((result) => (
                     <div className="card">
+                      
                       {result.driver.user.profilePicture ? <img src={result.driver.user.profilePicture}/> : (<Avatar name={result.driver.user.basicInformation.firstName + " " + result.driver.user.basicInformation.lastName} size="50" round={true} />) }
                       <div key={result.id} className="trip-details">
                         <h4>{result.pickup} - {result.destination}</h4>
@@ -72,7 +83,7 @@ const SearchForTrip = () => {
                       </div>
                       <h5>{result.pricePerSeat}</h5>
                       <p>{result.numberOfSeatsAvailable} seats</p>
-                      <button>Book now</button>
+                      <button onClick={handleTripRequest}>Request for trip</button>
                     </div>
                   ))}
                 </div>

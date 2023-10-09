@@ -17,7 +17,38 @@ const Board = () => {
           <div className="right-board">
             <div className="top">
               <div className="left">
-                <div className="request">
+              <div className="no">
+                  <h2>Created Trips</h2>
+                </div>
+                <div className="created-trip-card">
+                  <div className="pickup">
+                    <p>Pick up</p>
+                    <p>Ajah</p>
+                  </div>
+                  <div className="destination">
+                    <p>Dest.</p>
+                    <p>Lekki</p>
+                  </div>
+                  <button>Start</button>
+                  <button>End</button>
+                  <button>Cancel</button>
+                </div>
+                <div className="created-trip-card">
+                  <div className="pickup">
+                    <p>Pick up</p>
+                    <p>Obalende</p>
+                  </div>
+                  <div className="destination">
+                    <p>Dest.</p>
+                    <p>Ikeja</p>
+                  </div>
+                  <button>Start</button>
+                  <button>End</button>
+                  <button>Cancel</button>
+                </div>
+              </div>
+              <div className="middle">
+              <div className="request">
                   <h2>Request</h2>
                 </div>
                 <div className="card">
@@ -57,14 +88,10 @@ const Board = () => {
                   </div>
                 </div>
                 {/* <BookingRequest /> */}
-              </div>
-              <div className="middle">
-                <div className="no">
-                  <h2>Number of Trips</h2>
-                </div>
-                <div className="numberOfTrips">
-                  <p>12</p>
-                </div>
+
+
+
+                
               </div>
               <div className="right">
                 <div className="no">

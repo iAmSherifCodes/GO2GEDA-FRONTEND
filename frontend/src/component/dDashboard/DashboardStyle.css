@@ -80,6 +80,51 @@ h5{
     flex-direction: column;
     align-items: center;
 }
+
+.left .no{
+    height: 71px;
+}
+
+.created-trip-card{
+    width: 380px;
+    height: 47px;
+    border-radius: inherit;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    padding: 4px 0px;
+    align-items: center;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+    margin-top: 6px;
+}
+
+.created-trip-card .pickup{
+    width: 283px;;
+    margin-left: -70px;
+}
+
+.created-trip-card .pickup p{
+    margin: 0px 0px 0px 88px;
+}
+.created-trip-card .destination{
+    width: 292px;
+    margin-left: -37px;
+}
+
+.created-trip-card .destination p{
+    margin: 0px 0px 0px 69px;
+}
+
+.created-trip-card button{
+    height: 36px;
+    width: 100px;
+    color: whitesmoke;
+    background-color: #0000FF;
+    margin-right: 2px;
+    border: 2px;
+}
+
 .middle{
     width: 400px;
     height: 300px;
