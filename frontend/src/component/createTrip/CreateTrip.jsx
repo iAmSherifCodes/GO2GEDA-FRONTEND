@@ -13,9 +13,10 @@ const CreateTrip = () => {
     pickUpTime: new Date(),
     from: "",
     pricePerSeat: "",
-    email: "awofiranyesherif4@gmail.com",
+    driverId: "",
   };
   const [createTripData, setCreateTripData] = useState(initialObj);
+  const storedSession = sessionStorage.getItem("id");
 
   const handleChange = async (e) => {
     e.preventDefault();
@@ -38,7 +39,7 @@ const CreateTrip = () => {
       from: createTripData.from,
       pricePerSeat: createTripData.pricePerSeat,
       pickUpTime: dateValue.toLocaleString(),
-      email: "awofiranyesherif4@gmail.com",
+      driverId: storedSession,
     };
 
     console.log(data);
