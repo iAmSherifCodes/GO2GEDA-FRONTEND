@@ -38,8 +38,9 @@ const handleSubmit = async (event) => {
   try{
     const response = await axios.post
     ("http://localhost:8080/api/v1/go2geda/driver/registerDriver", data);
-    console.log(data);
-    console.log(response.data)
+    console.log(response);
+    const userId = response.data.id;
+    localStorage.setItem('id',userId)
       if(response.data.error==="Email already exists"){
       }else{
         alert("REGISTRATION SUCCESFUL")
@@ -47,15 +48,14 @@ const handleSubmit = async (event) => {
   }catch(error){
     console.log("An error occured",error)
   }
-
   console.log(data);
-
 }
+const storedUserId = localStorage.getItem('id');
+console.log(storedUserId)
 
   return (
     <>
       <div className="dcontainer">
-        
         <div className="dcard">
           <Link to="/" className="iom">
               < IoMdArrowRoundBack size="30px" />
