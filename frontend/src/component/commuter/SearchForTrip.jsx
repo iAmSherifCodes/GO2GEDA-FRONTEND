@@ -25,7 +25,7 @@ const SearchForTrip = () => {
 
     setIsLoading(true);
 
-    fetch(`http://localhost:8080/trip/searchByPickup/${destination}`)
+    fetch(`http://localhost:8080/trip/searchTripBy/from=${pickupLocation}&to=${destination}`)
       .then((response) => response.json())
       .then((data) => {
         setSearchResults(data);
