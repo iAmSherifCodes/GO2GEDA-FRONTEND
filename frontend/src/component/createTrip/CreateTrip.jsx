@@ -25,6 +25,7 @@ const CreateTrip = () => {
       [e.target.name]: e.target.value,
     }));
   };
+  
 
   const[dateValue, setDateValue]= useState(new Date())
   console.log(dateValue.toLocaleString())

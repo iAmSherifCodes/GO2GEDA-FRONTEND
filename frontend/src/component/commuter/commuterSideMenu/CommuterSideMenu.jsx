@@ -16,15 +16,15 @@ const CommuterSideMenu = ()=>{
         <>
             <div className="side-menu">
             <h2>Commuter Dashboard</h2>
-            <Link to="/driver-dashboard/" className="menu">
+            <Link to="/commuter-dashboard/" className="menu">
               <AiFillCar />
               <h5>Dashboard</h5>
             </Link>
-            <Link to= "/driver-dashboard/create-trip" className="menu">
+            <Link to= "/commuter-dashboard/search-for-trip" className="menu">
               <HiOutlineSearch />
               <h5>Search For Trip</h5>
             </Link>
-            <Link to="/driver-dashboard/book-request" className="menu">
+            <Link to="/commuter-dashboard/book-request" className="menu">
               <HiMiniClipboardDocumentList />
               <h5>Pending Request</h5>
             </Link>
@@ -32,11 +32,11 @@ const CommuterSideMenu = ()=>{
               <IoMdChatboxes />
               <h5>Group Chat</h5>
             </Link>
-            <Link to="/driver-dashboard/view-trip-history" className="menu">
+            <Link to="/commuter-dashboard/view-trip-history" className="menu">
               <LuHistory />
               <h5>View Trip History</h5>
             </Link>
-            <Link to="/driver-dashboard/profile-setting" className="menu">
+            <Link to="/commuter-dashboard/profile-setting" className="menu">
               <CgProfile />
               <h5>Profile Settings</h5>
             </Link>

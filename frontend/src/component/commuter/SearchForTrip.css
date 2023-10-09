@@ -1,11 +1,27 @@
 .search-card{
+    width: 492px;
+    height: 73px;
+    border-radius: inherit;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    padding: -5px 0px;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+    margin-top: 11px;
+
+}
+
+/* .search-card{
     width: 350px;
     height: 110px;
     border: 2px solid black;
     display: flex;
     flex-direction: column;
     padding: 0px 10px;
-}
+} */
 
 img{
     height: 30px;
@@ -29,6 +45,6 @@ img{
 
 .search-card button{
     color: rgb(233, 221, 199);
-    background-color: blueviolet;
+    background-color: rgb(44, 16, 71);
     margin: 0px;
 }
