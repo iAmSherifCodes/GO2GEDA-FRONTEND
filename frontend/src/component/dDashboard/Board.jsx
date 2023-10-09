@@ -22,11 +22,11 @@ const Board = () => {
                 </div>
                 <div className="created-trip-card">
                   <div className="pickup">
-                    <p>Pick up</p>
+                    <p id="created-trip-card-pick-up">Pick up</p>
                     <p>Ajah</p>
                   </div>
                   <div className="destination">
-                    <p>Dest.</p>
+                    <p id="created-trip-card-pick-up">Dest.</p>
                     <p>Lekki</p>
                   </div>
                   <button>Start</button>
@@ -35,11 +35,11 @@ const Board = () => {
                 </div>
                 <div className="created-trip-card">
                   <div className="pickup">
-                    <p>Pick up</p>
+                    <p id="created-trip-card-pick-up">Pick up</p>
                     <p>Obalende</p>
                   </div>
                   <div className="destination">
-                    <p>Dest.</p>
+                    <p id="created-trip-card-pick-up">Dest.</p>
                     <p>Ikeja</p>
                   </div>
                   <button>Start</button>
