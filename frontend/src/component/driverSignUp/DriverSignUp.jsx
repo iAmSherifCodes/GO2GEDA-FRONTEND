@@ -40,7 +40,7 @@ const handleSubmit = async (event) => {
     ("http://localhost:8080/api/v1/go2geda/driver/registerDriver", data);
     console.log(response);
     const userId = response.data.id;
-    localStorage.setItem('id',userId)
+    sessionStorage.setItem('id',userId)
       if(response.data.error==="Email already exists"){
       }else{
         alert("REGISTRATION SUCCESFUL")
@@ -50,9 +50,8 @@ const handleSubmit = async (event) => {
   }
   console.log(data);
 }
-const storedUserId = localStorage.getItem('id');
+const storedUserId = sessionStorage.getItem('id');
 console.log(storedUserId)
-
   return (
     <>
       <div className="dcontainer">

@@ -43,7 +43,9 @@ const CommuterSignUp = () => {
         data
       );
       console.log(data);
-      console.log(response.data);
+      const commuterId = response.data.id;
+      sessionStorage.setItem('id',commuterId)
+
       if (response.data.error === "Email already exists") {
         alert("Email already exists. Please use a different email.");
       } else {
@@ -53,6 +55,8 @@ const CommuterSignUp = () => {
       console.error("An error occurred:", error);
     }
   };
+  const storedCommuterId = sessionStorage.getItem('id');
+  console.log(storedCommuterId)
 
   return (
     <>
