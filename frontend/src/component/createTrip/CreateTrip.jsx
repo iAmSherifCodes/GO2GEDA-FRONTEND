@@ -13,7 +13,7 @@ const CreateTrip = () => {
     pickUpTime: new Date(),
     from: "",
     pricePerSeat: "",
-    email: "awofiranyesherif4@gmail.com",
+    email: "",
   };
   const [createTripData, setCreateTripData] = useState(initialObj);
 
@@ -38,7 +38,7 @@ const CreateTrip = () => {
       from: createTripData.from,
       pricePerSeat: createTripData.pricePerSeat,
       pickUpTime: dateValue.toLocaleString(),
-      email: "awofiranyesherif4@gmail.com",
+      id:localStorage.getItem("user"),
     };
 
     console.log(data);

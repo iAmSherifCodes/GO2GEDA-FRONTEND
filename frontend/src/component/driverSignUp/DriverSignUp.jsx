@@ -3,7 +3,7 @@ import "../driverSignUp/DriverSignUp.css";
 import image from "../driverSignUp/illustration.jpg";
 import axios from "axios";
 import { IoMdArrowRoundBack } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, json } from "react-router-dom";
 
 const DriverSignUp = () => {
   const initialValue = {
@@ -12,6 +12,7 @@ const DriverSignUp = () => {
     email: "",
     phoneNumber: "",
     password: "",
+    id:"",
   };
 
   const [details, setDetails] = useState(initialValue);
@@ -39,9 +40,10 @@ const DriverSignUp = () => {
         "http://localhost:8080/api/v1/go2geda/driver/registerDriver",
         data
       );
-      console.log(response);
-      const userId = response.data.id;
-      sessionStorage.setItem("id", userId);
+      const userResponse = JSON.stringify(response.data.id)
+      localStorage.setItem("user", userResponse);
+      const responseData = JSON.parse(localStorage.getItem("user")) 
+      console.log("user user --> ", responseData)
       if (response.data.error === "Email already exists") {
       } else {
         alert("REGISTRATION SUCCESFUL");

@@ -97,6 +97,9 @@ h5{
     font-size: 1.1rem;
     margin-bottom: 4px;
     margin-top: 6px;
+    border-radius: 8px;
+    margin-right: 40px;
+    
 }
 
 .created-trip-card .pickup{
@@ -245,8 +248,16 @@ h5{
     font-size: 1.1rem;
     margin-bottom: 4px;
     margin-top: 6px;
+    border-radius: 8px;
+    margin-right: 40px;
 }
-
+.name{
+    margin-right: 35px;
+}
+.review{
+    font-size: 2vh;
+    margin-right: 5px;
+}
 .checks{
     display: flex;
     flex-direction: row;
@@ -301,6 +312,9 @@ h5{
     
     .side-menu h2 {
         font-size: 1rem;
+    }
+    .listyle{
+        list-style: none;
     }
 }
 
