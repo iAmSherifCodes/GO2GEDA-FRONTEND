@@ -14,9 +14,7 @@ const Board = () => {
   const driverId = localStorage.getItem("user")
 
   const [tripRequests, setTripRequests] = useState([]);
-   const request = {
-    commuterId:
-  }
+
 
   useEffect(() => {
     if (driverId) {
