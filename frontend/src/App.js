@@ -32,6 +32,7 @@ import TripHistory from "./component/tripHistory/TripHistory";
 import CommuterDashboard from "./component/commuter/cDashboard/CommuterDashboard";
 import CommuterBoard from "./component/commuter/cDashboard/CommuterBoard";
 import SearchForTrip from "./component/commuter/SearchForTrip";
+import ViewTripHistory from "./component/commuter/ViewTripHistory";
 
 function App() {
   return (
@@ -78,6 +79,7 @@ function App() {
           <Route path="/commuter-dashboard/" element={<CommuterDashboard/>}>
             <Route index element={<CommuterBoard/>} />
             <Route path="search-for-trip" element={<SearchForTrip/>} />
+            <Route path="view-trip-history" element={<ViewTripHistory/>} />
 
           </Route>
 
