@@ -119,6 +119,10 @@ h5{
     margin: 0px 0px 0px 69px;
 }
 
+#created-trip-card-pick-up{
+    font-weight: bold;
+}
+
 .created-trip-card button{
     height: 36px;
     width: 100px;

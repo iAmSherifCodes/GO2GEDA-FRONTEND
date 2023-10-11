@@ -15,6 +15,8 @@ const Board = () => {
   const [driverHasRequest, setDriverHasRequests] = useState(false)
   const [createdTrip, setCreatedTrips] = useState([])
   const driverId = localStorage.getItem("user")
+  // const driverId = sessionStorage.getItem("id")
+  // console.log("((((())))====> session id" + driverId);
 
   const [tripRequests, setTripRequests] = useState([]);
 
@@ -22,6 +24,7 @@ const Board = () => {
     if (driverId) {
       const response = axios.get(`http://localhost:8080/trip/trip-requests/${driverId}`)
         .then((response) => {
+          console.log(response);
           setTripRequests(response.data);
           setDriverHasRequests(true)
         })
@@ -132,7 +135,6 @@ const Board = () => {
                   <h2>Created Trips</h2>
                 </div>
                 <div>{renderTrips()}</div>
-                {/* <button onClick={fetchCreatedTrips}></button> */}
               </div>
 
               <div className="middle">

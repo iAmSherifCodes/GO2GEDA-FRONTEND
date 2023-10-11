@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../driverSignUp/DriverSignUp.css";
 import image from "../driverSignUp/illustration.jpg";
 import axios from "axios";
@@ -16,19 +16,23 @@ const DriverSignUp = () => {
   };
 
   const [details, setDetails] = useState(initialValue);
+  const [responseData, setResponseData] = useState(null);
+
+  const storedUserId = window.sessionStorage;
 
   const handleChange = async (e) => {
     e.preventDefault();
-
     setDetails((state) => ({
       ...state,
       [e.target.name]: e.target.value,
     }));
   };
 
+  console.log(details);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const data = {
+    const obj = {
       firstName: details.firstName,
       lastName: details.lastName,
       email: details.email,
@@ -36,25 +40,46 @@ const DriverSignUp = () => {
       password: details.password,
     };
     try {
-      const response = await axios.post(
-        "http://localhost:8080/api/v1/go2geda/driver/registerDriver",
-        data
-      );
-      const userResponse = JSON.stringify(response.data.id)
-      localStorage.setItem("user", userResponse);
-      const responseData = JSON.parse(localStorage.getItem("user")) 
-      console.log("user user --> ", responseData)
+
+      // const response = await axios.post(
+      //   "http://localhost:8080/api/v1/go2geda/driver/registerDriver",
+      //   data
+      // );
+      // const userResponse = JSON.stringify(response.data.id)
+      // localStorage.setItem("user", userResponse);
+      // const responseData = JSON.parse(localStorage.getItem("user")) 
+      // console.log("user user --> ", responseData)
+
+      const response = await axios
+        .post("http://localhost:8080/api/v1/go2geda/driver/registerDriver", obj)
+        .then((response) => {
+          setResponseData(response.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+
+// 
       if (response.data.error === "Email already exists") {
+        alert("EMAIL ALREADY EXIST");
       } else {
         alert("REGISTRATION SUCCESFUL");
       }
     } catch (error) {
       console.log("An error occured", error);
     }
-    console.log(data);
   };
-  const storedUserId = sessionStorage.getItem("id");
-  console.log(storedUserId);
+
+  useEffect(() => {
+    if (responseData) {
+      console.log(responseData);
+      storedUserId.setItem("id", responseData.id);
+      console.log("ID:", responseData.id);
+      console.log("Name:", responseData.message);
+    }
+    
+  }, [responseData]);
+
   return (
     <>
       <div className="dcontainer">

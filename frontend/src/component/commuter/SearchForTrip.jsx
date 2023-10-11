@@ -5,10 +5,11 @@ import Avatar from "react-avatar";
 import axios from "axios";
 
 const SearchForTrip = () => {
-  const [destination, setDestination] = useState('');
-  const [pickupLocation, setPickupLocation] = useState('');
+  const [destination, setDestination] = useState("");
+  const [pickupLocation, setPickupLocation] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const storedSesstion = sessionStorage.getItem("id");
 
   const handleDestinationChange = (e) => {
     setDestination(e.target.value);
@@ -25,7 +26,9 @@ const SearchForTrip = () => {
 
     setIsLoading(true);
 
-    fetch(`http://localhost:8080/trip/searchByPickup/${destination}`)
+    fetch(
+      `http://localhost:8080/trip/searchTripBy/from=${pickupLocation}&to=${destination}`
+    )
       .then((response) => response.json())
       .then((data) => {
         setSearchResults(data);
@@ -38,10 +41,17 @@ const SearchForTrip = () => {
       });
   };
 
-  const handleTripRequest = () =>{
-    // const request = axios.post("http://localhost:8080/trip/bookTrip", )
-    // <BookingRequest />
-  }
+  const bookTrip = (id) => {
+    console.log("(())++>>trid id " + id);
+    console.log("(())++>>session id " + storedSesstion);
+    const request = axios
+      .post("http://localhost:8080/trip/bookTrip", {
+        tripId: id,
+        commuterId: storedSesstion,
+      })
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  };
 
   return (
     <>
@@ -75,15 +85,30 @@ const SearchForTrip = () => {
                   <h4>Available Trips</h4>
                   {searchResults.map((result) => (
                     <div className="card">
-                      
-                      {result.driver.user.profilePicture ? <img src={result.driver.user.profilePicture}/> : (<Avatar name={result.driver.user.basicInformation.firstName + " " + result.driver.user.basicInformation.lastName} size="50" round={true} />) }
+                      {result.driver.user.profilePicture ? (
+                        <img src={result.driver.user.profilePicture} />
+                      ) : (
+                        <Avatar
+                          name={
+                            result.driver.user.basicInformation.firstName +
+                            " " +
+                            result.driver.user.basicInformation.lastName
+                          }
+                          size="50"
+                          round={true}
+                        />
+                      )}
                       <div key={result.id} className="trip-details">
-                        <h4>{result.pickup} - {result.destination}</h4>
+                        <h4>
+                          {result.pickup} - {result.destination}
+                        </h4>
                         <p>{result.pickUpTime}</p>
                       </div>
                       <h5>{result.pricePerSeat}</h5>
                       <p>{result.numberOfSeatsAvailable} seats</p>
-                      <button onClick={handleTripRequest}>Request for trip</button>
+                      <button onClick={() => bookTrip(result.id)}>
+                        Request for trip
+                      </button>
                     </div>
                   ))}
                 </div>
