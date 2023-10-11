@@ -23,6 +23,7 @@ const DriverDashBoard = () =>{
       return (
         <div>
           <h2>Trips</h2>
+        
           <ul>
           {Object.keys(Trips).map((key) => (<li key={key}>{key}: {Trips[key]}</li>))}
         </ul>
