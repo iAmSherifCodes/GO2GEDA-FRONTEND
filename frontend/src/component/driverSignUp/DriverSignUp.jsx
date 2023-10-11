@@ -3,7 +3,7 @@ import "../driverSignUp/DriverSignUp.css";
 import image from "../driverSignUp/illustration.jpg";
 import axios from "axios";
 import { IoMdArrowRoundBack } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, json } from "react-router-dom";
 
 const DriverSignUp = () => {
   const initialValue = {
@@ -12,6 +12,7 @@ const DriverSignUp = () => {
     email: "",
     phoneNumber: "",
     password: "",
+    id:"",
   };
 
   const [details, setDetails] = useState(initialValue);
@@ -39,6 +40,16 @@ const DriverSignUp = () => {
       password: details.password,
     };
     try {
+
+      // const response = await axios.post(
+      //   "http://localhost:8080/api/v1/go2geda/driver/registerDriver",
+      //   data
+      // );
+      // const userResponse = JSON.stringify(response.data.id)
+      // localStorage.setItem("user", userResponse);
+      // const responseData = JSON.parse(localStorage.getItem("user")) 
+      // console.log("user user --> ", responseData)
+
       const response = await axios
         .post("http://localhost:8080/api/v1/go2geda/driver/registerDriver", obj)
         .then((response) => {
@@ -48,6 +59,7 @@ const DriverSignUp = () => {
           console.log(error);
         });
 
+// 
       if (response.data.error === "Email already exists") {
         alert("EMAIL ALREADY EXIST");
       } else {
