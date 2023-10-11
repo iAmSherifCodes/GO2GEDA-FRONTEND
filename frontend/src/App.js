@@ -32,7 +32,12 @@ import TripHistory from "./component/tripHistory/TripHistory";
 import CommuterDashboard from "./component/commuter/cDashboard/CommuterDashboard";
 import CommuterBoard from "./component/commuter/cDashboard/CommuterBoard";
 import SearchForTrip from "./component/commuter/SearchForTrip";
+<<<<<<< HEAD
 import TripRequest from "./component/commuter/cDashboard/TripRequest";
+=======
+import ViewTripHistory from "./component/commuter/ViewTripHistory";
+import Review from "./component/driverDashboard/Review";
+>>>>>>> f59a0c5c33241ea10614ac5b77da5b481c842e1f
 
 function App() {
   return (
@@ -63,6 +68,7 @@ function App() {
           <Route path="/join-partner" Component={JoinToPartner} />
           <Route path="/acctInfo" Component={AccountInformation} />
           <Route path="/verifyCommuter" Component={VerifyCommuter} />
+          <Route path="/reviews" Component={Review}/>
 
           <Route path="/driver-sign-up" Component={DriverSignUp} />
           <Route path="/tripReq" Component={TripRequest} />
@@ -80,6 +86,7 @@ function App() {
           <Route path="/commuter-dashboard/" element={<CommuterDashboard/>}>
             <Route index element={<CommuterBoard/>} />
             <Route path="search-for-trip" element={<SearchForTrip/>} />
+            <Route path="view-trip-history" element={<ViewTripHistory/>} />
 
           </Route>
 

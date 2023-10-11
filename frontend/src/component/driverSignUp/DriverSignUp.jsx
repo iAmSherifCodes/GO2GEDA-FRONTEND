@@ -36,6 +36,7 @@ const DriverSignUp = () => {
       password: details.password,
     };
     try {
+<<<<<<< HEAD
       const response = await axios.post(
           "http://localhost:8080/api/v1/go2geda/driver/registerDriver",
           data
@@ -44,6 +45,28 @@ const DriverSignUp = () => {
       localStorage.setItem("user", userResponse);
       const responseData = JSON.parse(localStorage.getItem("user"))
       console.log("user user --> ", responseData)
+=======
+
+      // const response = await axios.post(
+      //   "http://localhost:8080/api/v1/go2geda/driver/registerDriver",
+      //   data
+      // );
+      // const userResponse = JSON.stringify(response.data.id)
+      // localStorage.setItem("user", userResponse);
+      // const responseData = JSON.parse(localStorage.getItem("user")) 
+      // console.log("user user --> ", responseData)
+
+      const response = await axios
+        .post("http://localhost:8080/api/v1/go2geda/driver/registerDriver", obj)
+        .then((response) => {
+          setResponseData(response.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+
+// 
+>>>>>>> f59a0c5c33241ea10614ac5b77da5b481c842e1f
       if (response.data.error === "Email already exists") {
       } else {
         alert("REGISTRATION SUCCESFUL");
