@@ -40,16 +40,7 @@ const Board = () => {
     }
   }, []);
 
-  // const fetchCreatedTrips = async () => {
-  //   try {
-  //     const response = await axios.get(`http://localhost:8080/trip/driver-Trip/${driverId}`);
-  //     const trips = response.data;
-  //     setCreatedTrips(trips);
-  //     setDriverHasCreatedTrips(true);
-  //   } catch (error) {
-  //     console.error('Error fetching created trips:', error);
-  //   }
-  // };
+
 
   useEffect(() => {
     const fetchCreatedTrips = async () => {
@@ -229,7 +220,6 @@ const Board = () => {
             <div className="bottom">
               <h2>Trips</h2>
               <div className="Table">
-                {/* <div>{renderTripHistory()}</div> */}
                 <table>
                   <tr>
                     <th>Pick-up</th>
@@ -241,14 +231,6 @@ const Board = () => {
                   </tr>
                   {
                     renderTripHistory()
-                    //   <tr>
-                    //   <td>Lekki Phase 1</td>
-                    //   <td>Obalende</td>
-                    //   <td>1,000.00</td>
-                    //   <td>2</td>
-                    //   <td>19:00</td>
-                    //   <td>Open</td>
-                    // </tr>
                   }
                 </table>
               </div>

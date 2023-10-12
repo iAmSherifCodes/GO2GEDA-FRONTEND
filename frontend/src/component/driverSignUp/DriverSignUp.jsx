@@ -50,7 +50,7 @@ const DriverSignUp = () => {
         })
         .catch((error) => {
           if(error.response.data=="EMAIL_ALREADY_EXIST"){
-            alert("EMAIL_ALREADY_EXIST");
+            alert("EMAIL ALREADY EXIST");
           }
         });
 

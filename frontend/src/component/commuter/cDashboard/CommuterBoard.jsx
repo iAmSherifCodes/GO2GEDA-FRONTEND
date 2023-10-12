@@ -7,10 +7,59 @@ import BookingRequest from "../../bookingRequest/BookingRequest";
 import TripHistory from "../../tripHistory/TripHistory";
 import SideMenu from "../../sideMenu/SideMenu";
 import { BiTrip } from "react-icons/bi";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 const CommuterBoard = () => {
+  const [bookedTrips, setBookedTrips] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const storedSession = localStorage.getItem("id");
+  const baseUrl = "http://localhost:8080/";
+
+  useEffect(() => {
+    fetch(`${baseUrl}trip/viewBookedTrip/${storedSession}`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setBookedTrips(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        setLoading(false);
+        alert(error);
+      });
+  }, [bookedTrips]);
+
+  const renderBookedTrips = () => {
+    return (
+      <>
+        {loading ? (
+          <p>Loading...</p>
+        ) : bookedTrips.length > 0 ? (
+          bookedTrips.map((trip, index) => (
+            <div className="card">
+              <div className="avatar">
+                <BiTrip size="27" />
+              </div>
+              <div className="pickup">
+                <p>Pickup {trip.pickup}</p>
+              </div>
+              <div className="destination">
+                <p>Dest. {trip.destination}</p>
+              </div>
+              <div className="checks">
+                <ImCheckboxChecked size={23} color="green" />
+                <GiCancel size={23} color="red" />
+              </div>
+            </div>
+          ))
+        ) : (
+          <p>No trips available</p>
+        )}
+      </>
+    );
+  };
+
   return (
     <>
       <div className="container">
@@ -20,32 +69,9 @@ const CommuterBoard = () => {
             <div className="top">
               <div className="left">
                 <div className="request">
-                  <h2>Pending Request</h2>
+                  <h2>Booked Trips</h2>
                 </div>
-                <div className="card">
-                  <div className="avatar">
-                    <BiTrip size="27" />
-                  </div>
-                  <div className="name">
-                    <p>Duru Oluchi</p>
-                  </div>
-                  <div className="checks">
-                    <ImCheckboxChecked size={23} color="green" />
-                    <GiCancel size={23} color="red" />
-                  </div>
-                </div>
-                <div className="card">
-                  <div className="avatar">
-                    <BiTrip size="27" />
-                  </div>
-                  <div className="name">
-                    <p>Obinali Goodness</p>
-                  </div>
-                  <div className="checks">
-                    <ImCheckboxChecked size={23} color="green" />
-                    <GiCancel size={23} color="red" />
-                  </div>
-                </div>
+                <div>{renderBookedTrips()}</div>
               </div>
               <div className="middle">
                 <div className="no">

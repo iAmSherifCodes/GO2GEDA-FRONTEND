@@ -44,7 +44,6 @@ const CommuterSignUp = () => {
       );
 
       console.log(response.data)
-      // console.log(data);
       const commuterId = response.data.id;
       sessionStorage.setItem('id',commuterId)
 
