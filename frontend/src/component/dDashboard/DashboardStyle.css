@@ -357,10 +357,10 @@ h5{
         color: white;
     }
     .right-board{
-        width: 90%;
+        width: 100%;
         display: flex;
         flex-direction: column;
-        height: 840px;
+        height: 134vh;
         background-color: aliceblue;
         margin: 0px;
         margin-left: 10px;
@@ -391,7 +391,7 @@ h5{
     }
 
     .created-trip-card{
-        width: 380px;
+        width: 290px;
         height: 47px;
         border-radius: inherit;
         border: 2px solid black;
