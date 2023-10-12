@@ -32,12 +32,10 @@ import TripHistory from "./component/tripHistory/TripHistory";
 import CommuterDashboard from "./component/commuter/cDashboard/CommuterDashboard";
 import CommuterBoard from "./component/commuter/cDashboard/CommuterBoard";
 import SearchForTrip from "./component/commuter/SearchForTrip";
-<<<<<<< HEAD
 import TripRequest from "./component/commuter/cDashboard/TripRequest";
-=======
 import ViewTripHistory from "./component/commuter/ViewTripHistory";
 import Review from "./component/driverDashboard/Review";
->>>>>>> f59a0c5c33241ea10614ac5b77da5b481c842e1f
+
 
 function App() {
   return (

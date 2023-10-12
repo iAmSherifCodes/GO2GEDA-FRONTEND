@@ -170,7 +170,6 @@ h5{
     margin-left: 99px;
     padding: 10px 10px;
 }
-
 .no{
     height: 98px;
     padding: 0px 0px;
@@ -299,6 +298,339 @@ h5{
     background-color: white;
 }
 
+@media screen and (min-width: 900px) and (max-width: 1400px){
+    .dashboard-container{
+         height: 800px;
+        display: flex;
+        font-family: "Open Sans"
+    }
+    .dashboard-navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 70px;
+        background-color: blue;
+        color: white;
+    }
+    .menu{
+        text-decoration: none;
+        display: flex;
+        font-size: 1.3rem;
+        align-items: center;
+        margin-top: 50px;
+        padding-left: 0px;
+    }
+    h5{
+        margin-left: 15px;
+    }
+
+    /* .menu img{
+        margin-right: 20px;
+    } */
+
+    .side-menu{
+        padding-top: 40px;
+        height: 840px;
+        width: 18%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 60px;
+        box-shadow: 0 0px 10px 2px rgba(0, 65, 216, 0.758);
+        background-color: aliceblue;
+    }
+
+    .side-menu h2{
+        font-size: 1.3rem;
+    }
+
+    .dashboard-navbar{
+        display: flex;
+        justify-content: space-between;
+        height: 60px;
+        align-items: center;
+        padding: 10px 70px;
+        background-color: blue;
+        color: white;
+    }
+    .right-board{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        height: 840px;
+        background-color: aliceblue;
+        margin: 0px;
+        margin-left: 10px;
+    }
+
+    .top{
+        height: 250px;
+        display: flex;
+        justify-content: space-around;
+        padding: 30px;
+        width: 80vw;
+    }
+
+    .left{
+        width: 300px;
+        height: 250px;
+        /*background-color: aliceblue;*/
+        box-shadow: 0 0px 5px 1px rgba(0, 65, 216, 0.758);
+        font-size: 1.3rem;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left .no{
+        height: 71px;
+    }
+
+    .created-trip-card{
+        width: 380px;
+        height: 47px;
+        border-radius: inherit;
+        border: 2px solid black;
+        display: flex;
+        flex-direction: row;
+        padding: 4px 0px;
+        align-items: center;
+        font-size: 1.1rem;
+        margin-bottom: 4px;
+        margin-top: 6px;
+        border-radius: 8px;
+        margin-right: 40px;
+
+    }
+
+    .created-trip-card .pickup{
+        width: 283px;;
+        margin-left: -70px;
+    }
+
+    .created-trip-card .pickup p{
+        margin: 0px 0px 0px 88px;
+    }
+    .created-trip-card .destination{
+        width: 292px;
+        margin-left: -37px;
+    }
+
+    .created-trip-card .destination p{
+        margin: 0px 0px 0px 69px;
+    }
+
+    #created-trip-card-pick-up{
+        font-weight: bold;
+    }
+
+    .created-trip-card button{
+        height: 36px;
+        width: 100px;
+        color: whitesmoke;
+        background-color: #0000FF;
+        margin-right: 2px;
+        border: 2px;
+        border-radius: 7px;
+    }
+
+    .middle{
+        width: 300px;
+        height: 250px;
+        /*background-color: aliceblue;*/
+        box-shadow: 0 0px 5px 1px rgba(0, 65, 216, 0.758);
+        font-size: 1.3rem;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .right{
+        width: 300px;
+        height: 250px;
+        background-color: aliceblue;
+        box-shadow: 0 0px 5px 1px rgba(0, 65, 216, 0.758);
+        font-size: 1.3rem;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .bottom{
+        width: 74.5vw;
+        height: 408px;
+        margin-top: 4px;
+        /*background-color: aliceblue;*/
+        box-shadow: 0 0px 5px 1px rgba(0, 65, 216, 0.758);
+        font-size: 1.3rem;
+        border-radius: 15px;
+        margin-left: 55px;
+        padding: 10px 10px;
+    }
+    .no{
+        height: 98px;
+        padding: 0px 0px;
+        width: inherit;
+        border-radius: inherit;
+        border-end-end-radius: 0px;
+        background-color: blue;
+        color: whitesmoke;
+        display: flex;
+        justify-content: center;
+    }
+
+    .no h2{
+        font-size: 2rem;
+        margin-top: 12px;
+        margin-bottom: 0px;
+    }
+
+    .request{
+        height: 73px;
+        padding: 0px 0px;
+        width: inherit;
+        border-radius: inherit;
+        border-end-end-radius: 0px;
+        background-color: blue;
+        color: whitesmoke;
+        display: flex;
+        justify-content: center;
+    }
+
+    .request h2{
+        font-size: 2rem;
+        margin-top: 12px;
+    }
+
+    .wallet{
+        height: 98px;
+        padding: 0px 0px;
+        /*width: inherit;*/
+        border-radius: inherit;
+        border-end-end-radius: 0px;
+        background-color: blue;
+        color: whitesmoke;
+        display: flex;
+        justify-content: center;
+    }
+
+    .wallet h2{
+        font-size: 2rem;
+        margin-top: 12px;
+    }
+
+    .numberOfTrips{
+        display: flex;
+        height: inherit;
+        width: inherit;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0px;
+    }
+    .numberOfTrips p{
+        margin-left: 0px;
+        font-size: 3rem;
+        font-family: "Open Sans";
+    }
+
+
+
+    .card{
+        width: 380px;
+        height: 47px;
+        border-radius: inherit;
+        border: 2px solid black;
+        display: flex;
+        flex-direction: row;
+        padding: 4px 0px;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 1.1rem;
+        margin-bottom: 4px;
+        margin-top: 6px;
+        border-radius: 8px;
+        margin-right: 40px;
+    }
+    .name{
+        margin-right: 35px;
+    }
+    .review{
+        font-size: 2vh;
+        margin-right: 5px;
+    }
+    .checks{
+        display: flex;
+        flex-direction: row;
+        width: 55px;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .avatar{
+        margin-left: 5px;
+    }
+
+
+    .Table table {
+        margin-top: 10px;
+        width: 75vw;
+        height: inherit;
+    }
+
+    .Table th {
+        background-color: blue;
+        color: white;
+    }
+
+    .Table td {
+        text-align: center;
+        margin-top: 10px;
+
+    }
+
+    .Table table tr:nth-child(even) {
+        background-color: #e6e3f5;
+    }
+    .Table table tr:nth-child(odd) {
+        background-color: white;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* .container{
+    width: 100%;
+    background-color: rgb(220, 220, 220);
+    height: 100vh;
+} */
+
+
+}
+
+
 @media screen and (max-width: 768px) {
     .menu {
         margin-top: 10px;
@@ -306,14 +638,14 @@ h5{
         font-size: 1.4rem;
         /* max-width: 100%; */
     }
-    
-    .side-menu {  
+
+    . side-menu {
         /* max-width: 100%;       */
         width: 100%;
         padding: 70px;
-        height: auto; 
+        height: auto;
     }
-    
+
     .side-menu h2 {
         font-size: 1rem;
     }

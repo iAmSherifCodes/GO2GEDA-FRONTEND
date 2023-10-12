@@ -38,7 +38,7 @@ const Board = () => {
 
     // const fetchCreatedTrips = async () => {
     //   try {
-    //     const response = await axios.get(http://localhost:8080/trip/driver-Trip/${driverId});
+    //     const response = await axios.get(`http://localhost:8080/trip/driver-Trip/${driverId}`);
     //     const trips = response.data;
     //     setCreatedTrips(trips);
     //     setDriverHasCreatedTrips(true);
@@ -114,7 +114,7 @@ const Board = () => {
                 tripId,
                 commuterId,
             };
-            const response = await axios.post("http://localhost:8080/trip/rejectRequest", request);
+            const response = await axios.post("http://localhost:8080/trip/rejectTrip", request);
             const trips = response.data
             console.log(trips);
             console.log(response);
@@ -142,7 +142,9 @@ const Board = () => {
                 </div>
             );
         } else {
-            return null;
+            return (<div>
+                <p>No Trip has been created</p>
+            </div>);
         }
     };
     return (
@@ -173,8 +175,8 @@ const Board = () => {
                                                 <p>{request.senderFirstName + " " + request.senderLastName}</p>
                                             </div>
                                             <div className="checks">
-                                                <ImCheckboxChecked size={23} color="green" onClick={() => rejectRequest(request.tripId, request.commuterId)} />
-                                                <GiCancel size={23} color="red" />
+                                                <ImCheckboxChecked size={23} color="green"  />
+                                                <GiCancel size={23} color="red"   onClick={() => rejectRequest(request.tripId, request.commuterId)}/>
                                             </div>
                                         </div>
                                     ))}
