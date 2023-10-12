@@ -6,7 +6,6 @@ import { registerDriverCommuter } from "../api/Api";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { IoMdArrowRoundBack } from "react-icons/io";
-// import { collapseClasses } from "@mui/material"
 const CommuterSignUp = () => {
   const initialValue = {
     firstName: "",
@@ -15,13 +14,12 @@ const CommuterSignUp = () => {
     phoneNumber: "",
     password: "",
   };
-
   const [details, setDetails] = useState(initialValue);
   const navigate = useNavigate();
+  const storedSession = window.localStorage;
 
   const handleChange = async (e) => {
     e.preventDefault();
-
     setDetails((state) => ({
       ...state,
       [e.target.name]: e.target.value,
@@ -43,9 +41,9 @@ const CommuterSignUp = () => {
         data
       );
 
-      console.log(response.data)
+      console.log(response.data);
       const commuterId = response.data.id;
-      sessionStorage.setItem('id',commuterId)
+      storedSession.setItem("id", commuterId);
 
       if (response.data.error === "Email already exists") {
         alert("Email already exists. Please use a different email.");
@@ -56,8 +54,8 @@ const CommuterSignUp = () => {
       console.error("An error occurred:", error);
     }
   };
-  const storedCommuterId = sessionStorage.getItem('id');
-  console.log(storedCommuterId)
+  // const storedCommuterId = sessionStorage.getItem("id");
+  // console.log(storedCommuterId);
 
   return (
     <>

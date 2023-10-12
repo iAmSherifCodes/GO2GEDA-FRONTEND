@@ -13,22 +13,23 @@ import axios from "axios";
 const CommuterBoard = () => {
   const [bookedTrips, setBookedTrips] = useState([]);
   const [loading, setLoading] = useState(false);
-  const storedSession = localStorage.getItem("id");
+  const [tripHistory, setTripHistory] = useState([]);
+  const storedSession = sessionStorage.getItem("id");
   const baseUrl = "http://localhost:8080/";
 
-  useEffect(() => {
-    fetch(`${baseUrl}trip/viewBookedTrip/${storedSession}`)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setBookedTrips(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        setLoading(false);
-        alert(error);
-      });
-  }, [bookedTrips]);
+  // useEffect(() => {
+  //   fetch(`${baseUrl}trip/viewBookedTrip/${storedSession}`)
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       console.log(data);
+  //       setBookedTrips(data);
+  //       setLoading(false);
+  //     })
+  //     .catch((error) => {
+  //       setLoading(false);
+  //       alert(error);
+  //     });
+  // }, [bookedTrips]);
 
   const renderBookedTrips = () => {
     return (
@@ -59,6 +60,65 @@ const CommuterBoard = () => {
       </>
     );
   };
+
+  const renderTripHistory = () => {
+    return (
+      <>
+        {loading ? (
+          <p>Loading...</p>
+        ) : tripHistory.length > 0 ? (
+          tripHistory.map((trip, index) => (
+            <tr key={index}>
+              <td>{trip.pickup}</td>
+              <td>{trip.destination}</td>
+              <td>{trip.pricePerSeat}</td>
+              <td>{trip.numberOfSeatsAvailable}</td>
+              <td>{trip.startTime}</td>
+              <td>{trip.tripStatus}</td>
+            </tr>
+          ))
+        ) : (
+          <tr>
+            <td colSpan="6">No trip history</td>
+          </tr>
+        )}
+      </>
+    );
+  };
+
+  useEffect(() => {
+    fetch(`http://localhost:8080/trip/viewCommuterTrips/${storedSession}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+        setTripHistory(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error('An error occurred:', error);
+        setLoading(false); // You might want to set an error state here or display an error message.
+      });
+  }, [storedSession]); // Assuming storedSession is the actual dependency for this effect
+  
+
+  // useEffect(() => {
+  //   fetch(`http://localhost:8080/trip/viewCommuterTrips/${storedSession}`)
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       console.log(data);
+  //       setTripHistory(data);
+  //       setLoading(false);
+  //     })
+  //     .catch((error) => {
+  //       setLoading(false);
+  //       console.log(error);
+  //     });
+  // }, [tripHistory]);
 
   return (
     <>
@@ -103,33 +163,11 @@ const CommuterBoard = () => {
                     <th>Time</th>
                     <th>Status</th>
                   </tr>
-                  <tr>
-                    <td>Lekki Phase 1</td>
-                    <td>Obalende</td>
-                    <td>1,000.00</td>
-                    <td>2</td>
-                    <td>19:00</td>
-                    <td>Open</td>
-                  </tr>
-                  <tr>
-                    <td>Ajah</td>
-                    <td>Yaba Sabo</td>
-                    <td>1,500.00</td>
-                    <td>4</td>
-                    <td>10:00</td>
-                    <td>Closed</td>
-                  </tr>
-                  <tr>
-                    <td>Iyana Ipaja</td>
-                    <td>Ikeja</td>
-                    <td>700.00</td>
-                    <td>4</td>
-                    <td>2:00</td>
-                    <td>Closed</td>
-                  </tr>
+                  {
+                    renderTripHistory()
+                  }
                 </table>
               </div>
-              {/* <TripHistory /> */}
             </div>
           </div>
         </div>

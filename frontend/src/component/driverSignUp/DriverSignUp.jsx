@@ -28,7 +28,7 @@ const DriverSignUp = () => {
     }));
   };
 
-  console.log(details);
+  // console.log(details);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -40,11 +40,11 @@ const DriverSignUp = () => {
       password: details.password,
     };
 
-    const baseUrl  = "http://localhost:8080";
+    // const baseUrl  = "http://localhost:8080";
     try {
 
       const response = await axios
-        .post(`${baseUrl}/api/v1/go2geda/driver/registerDriver`, obj)
+        .post("http://localhost:8080/api/v1/go2geda/driver/registerDriver", obj)
         .then((response) => {
           setResponseData(response.data);
         })

@@ -42,8 +42,6 @@ const SearchForTrip = () => {
   };
 
   const bookTrip = (id) => {
-    console.log("(())++>>trid id " + id);
-    console.log("(())++>>session id " + storedSesstion);
     const request = axios
       .post("http://localhost:8080/trip/bookTrip", {
         tripId: id,

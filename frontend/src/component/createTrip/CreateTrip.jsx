@@ -1,10 +1,10 @@
 import { useState } from "react";
 import "../createTrip/CreateTrip.css";
 import axios from "axios";
-import {DateTimePicker} from "react-datetime-picker";
-import 'react-datetime-picker/dist/DateTimePicker.css';
-import 'react-calendar/dist/Calendar.css';
-import 'react-clock/dist/Clock.css';
+import { DateTimePicker } from "react-datetime-picker";
+import "react-datetime-picker/dist/DateTimePicker.css";
+import "react-calendar/dist/Calendar.css";
+import "react-clock/dist/Clock.css";
 
 const CreateTrip = () => {
   const initialObj = {
@@ -29,10 +29,9 @@ const CreateTrip = () => {
       [e.target.name]: e.target.value,
     }));
   };
-  
 
-  const[dateValue, setDateValue]= useState(new Date())
-  console.log(dateValue.toLocaleString())
+  const [dateValue, setDateValue] = useState(new Date());
+  console.log(dateValue.toLocaleString());
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -42,8 +41,6 @@ const CreateTrip = () => {
       from: createTripData.from,
       pricePerSeat: createTripData.pricePerSeat,
       pickUpTime: dateValue.toLocaleString(),
-
-      // id:localStorage.getItem("user")
       driverId: localStorage.getItem("id"),
     };
 
@@ -54,7 +51,6 @@ const CreateTrip = () => {
       data
     );
     console.log(response === 200);
-
 
     console.log(data);
   };
@@ -73,11 +69,13 @@ const CreateTrip = () => {
             name="from"
             placeholder="Pickup Location"
           />
-          <input type="text"
-          name="to"
-          required
-          onChange={handleChange}
-          placeholder="Dropoff Location" />
+          <input
+            type="text"
+            name="to"
+            required
+            onChange={handleChange}
+            placeholder="Dropoff Location"
+          />
         </div>
         <div className="header">
           <h3>Number Of Seats Available</h3>
@@ -99,10 +97,10 @@ const CreateTrip = () => {
             placeholder="Price Per Seat"
           />
         </div>
-        <div >
+        <div>
           <h3>Start Time</h3>
-          < DateTimePicker
-            minDate= {new Date()}
+          <DateTimePicker
+            minDate={new Date()}
             name="pickUpTime"
             onChange={setDateValue}
             placeholder="Start Time"
