@@ -12,7 +12,7 @@ const AdminLogin = () =>{
 
         setData((state)=>({
             ...state,
-            [event.target.name]: event.target.value,
+            [event.target.name]: event.target.value
         }));
       
 
@@ -35,7 +35,7 @@ const AdminLogin = () =>{
                      <h1>Admin Login</h1>
                
                <form className="form" onSubmit={handleSubmit}>
-                    <input type="email" placeholder="EmailAddress" name="emaiAddress" onChange={CollectLoginDetails} ></input><br/>
+                    <input type="email" placeholder="EmailAddress" name="emailAddress" onChange={CollectLoginDetails} ></input><br/>
                     <input type="password" placeholder="Password" name="password" onChange={CollectLoginDetails} ></input><br/>
                     <button className="submitBtn" onClick={handleSubmit}>Submit</button>
                 </form>  

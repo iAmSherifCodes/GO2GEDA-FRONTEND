@@ -66,7 +66,7 @@ const SignIn = () => {
 
             <div className="dbelow-forms">
               <p>Don't have an account yet?</p>
-              <a href="/">Sign Up</a>
+              {/* <a href="/">Sign Up</a> */}
             </div>
 
             <button className="dsign-ups" onClick={handleSubmit}>

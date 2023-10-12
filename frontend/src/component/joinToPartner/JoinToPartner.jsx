@@ -42,16 +42,16 @@ const JoinToPartner = () => {
                     <p>Investing in Go2Geda isn't just about financial returns; it's about shaping the future of
                         transportation and making a positive impact on the planet. Together, we can create
                         sustainable, convenient, and accessible mobility solutions for all.</p>
-                        <form className="joinUs-form" onSubmit={handleSubmit}>
+                    <form className="joinUs-form" onSubmit={handleSubmit}>
                     <input type="email" name="emailAddress" placeholder="EmailAddress" onChange={collectLoginData} />
                     <button className="submitBtn" onClick={handleSubmit}>Join Us</button>
-                </form>
-                <p className="DivP">Join us: on this exciting journey and help steer the transportation industry into a new era.
+                    </form>
+                   <p className="DivP">Join us: on this exciting journey and help steer the transportation industry into a new era.
                         Contact us at invest@go2geda.com to explore investment opportunities today!</p>
                     
                 </div>
-              </div>
-            <div className="invest">
+            </div>
+             <div className="invest">
                 <img src={investor} alt="" />
             </div>
         </div>

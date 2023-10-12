@@ -69,7 +69,7 @@ const DriverSignUp = () => {
   }, [responseData]);
 
   return (
-    <>
+    // <>
       <div className="dcontainer">
         <div className="dcard">
           <Link to="/" className="iom">
@@ -125,7 +125,7 @@ const DriverSignUp = () => {
           </div>
         </div>
       </div>
-    </>
+    // </>
   );
 };
 export default DriverSignUp;

@@ -33,6 +33,7 @@ import CommuterDashboard from "./component/commuter/cDashboard/CommuterDashboard
 import CommuterBoard from "./component/commuter/cDashboard/CommuterBoard";
 import SearchForTrip from "./component/commuter/SearchForTrip";
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -62,9 +63,12 @@ function App() {
           <Route path="/join-partner" Component={JoinToPartner} />
           <Route path="/acctInfo" Component={AccountInformation} />
           <Route path="/verifyCommuter" Component={VerifyCommuter} />
+          
 
           <Route path="/driver-sign-up" Component={DriverSignUp} />
+          
           {/* <Route path="/driver-dDashboard" Component={DriverDashboard} /> */}
+
 
           <Route path="/driver-dashboard/" element={<DriverDashboard />}>
             <Route index element={<Board />} />

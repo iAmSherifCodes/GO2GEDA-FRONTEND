@@ -3,10 +3,10 @@
     
 }
 .textPage{
-    height: 472px;
-    width: 753px;
+    height: 472px; 
+    width: 753px; 
     /* border: 5px solid black; */
-    padding: 20px 83px; 
+    padding: 20px 83px;  
    
 }
 
@@ -15,11 +15,12 @@ h1{
     margin-left: 100px;
     margin-bottom: 49px;
     font-size: 2rem;
+    /* color:  rgb(172, 172, 255); */
     
 }
 .joinUs-form{
     margin-top: 20px; 
-    width: 450px;
+    width: 450px; 
     display: flex;
     /* justify-content: space-between; */
     /* border: 1px solid red; */
@@ -28,12 +29,12 @@ h1{
 .sub{
     text-align: center;
     margin-top: 25px;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; 
     /* align-items: center; */
     
 }
 .textPage p{
-    text-align: center;
+    /* text-align: center;   */
 
 }
 .joinUs-form button{
@@ -42,10 +43,10 @@ h1{
     border: none;
     height: 30px;
     border-radius: 4px;
-    margin-left: 10px;
+    margin-left: 10px; 
 }
 .joinUs-form input{
-    width: 300px;
+    width: 300px; 
     height: 25px;
     border-radius: 4px;
     
