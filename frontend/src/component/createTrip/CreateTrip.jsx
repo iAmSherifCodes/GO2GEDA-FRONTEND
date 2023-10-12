@@ -17,7 +17,7 @@ const CreateTrip = () => {
     driverId: "",
   };
   const [createTripData, setCreateTripData] = useState(initialObj);
-  const storedSession = .getItem("id");
+  const storedSession = localStorage.getItem("id");
   // console.log("((((())))====> session id" + sessionStorage.getItem("id"));
   const handleChange = async (e) => {
     e.preventDefault();
@@ -42,7 +42,7 @@ const CreateTrip = () => {
       pickUpTime: dateValue.toLocaleString(),
 
       // id:localStorage.getItem("user")
-      driverId: sessionStorage.getItem("id"),
+      driverId: localStorage.getItem("id"),
     };
 
     console.log(data);

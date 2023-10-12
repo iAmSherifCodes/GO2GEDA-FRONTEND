@@ -1,7 +1,7 @@
 import { CgProfile } from "react-icons/cg";
-import SideMenu from "../../sideMenu/SideMenu";
 import { Link, Outlet } from "react-router-dom";
 import CommuterSideMenu from "../commuterSideMenu/CommuterSideMenu";
+
 
 const CommuterDashboard = () => {
   return (
@@ -16,6 +16,7 @@ const CommuterDashboard = () => {
         <CommuterSideMenu />
         <Outlet />
       </div>
+      
     </>
   );
 };

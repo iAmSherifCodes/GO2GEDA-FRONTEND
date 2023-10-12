@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const ViewTripHistory = () => {
   const [tripHistory, setTripHistory] = useState([]);
   const [loading, setLoading] = useState(false);
-  const storedSesstion = sessionStorage.getItem("id");
+  const storedSesstion = localStorage.getItem("user");
 
   useEffect(() => {
     fetch(`http://localhost:8080/trip/viewCommuterTrips/${storedSesstion}`)
@@ -24,7 +24,7 @@ const ViewTripHistory = () => {
       <div>
         {loading ? (
           <p>Loading...</p>
-        ) : (
+        ) : tripHistory.length > 0 ? (
           <div className="history">
             <h2>Trip History</h2>
             <div className="dTable">
@@ -50,6 +50,8 @@ const ViewTripHistory = () => {
               </table>
             </div>
           </div>
+        ) : (
+            <p>No trip history</p>
         )}
       </div>
       );
