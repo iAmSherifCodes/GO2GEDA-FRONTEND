@@ -3,7 +3,9 @@ import { GiCancel } from "react-icons/gi";
 import Avatar from "react-avatar";
 import "../bookingRequest/BookingRequest.css";
 import axios from "axios";
+
 import { useState, useEffect } from "react";
+
 const BookingRequest = () => {
   const [tripRequests, setTripRequests] = useState([]);
 
@@ -14,7 +16,7 @@ const BookingRequest = () => {
       const response = axios.get(`http://localhost:8080/trip/trip-requests/${driverId}`)
         .then((response) => {
           setTripRequests(response.data);
-          
+
         })
         .catch((error) => {
           console.error('Error fetching trip requests:', error);
@@ -45,7 +47,6 @@ const BookingRequest = () => {
         
       ))}
     </ul></div>
-  
   )
 };
 

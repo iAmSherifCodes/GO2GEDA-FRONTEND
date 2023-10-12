@@ -16,7 +16,7 @@ const HomePage = () => {
         <div className="first-step">
           <div className="text">
             <h3>
-              Welcome to <span style={{ color: "blue" }}>Go2Geda</span>
+              Welcome to <span style={{ color: "#8181EA" }}>Go2Geda</span>
             </h3>
             <h4>Transportation made easy.</h4>
             <h4 id="ensure">
