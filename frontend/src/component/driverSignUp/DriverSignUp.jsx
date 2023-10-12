@@ -18,7 +18,7 @@ const DriverSignUp = () => {
   const [details, setDetails] = useState(initialValue);
   const [responseData, setResponseData] = useState(null);
 
-  const storedUserId = window.sessionStorage;
+  const storedUserId = window.localStorage;
 
   const handleChange = async (e) => {
     e.preventDefault();
@@ -39,24 +39,19 @@ const DriverSignUp = () => {
       phoneNumber: details.phoneNumber,
       password: details.password,
     };
+
+    const baseUrl  = "http://localhost:8080";
     try {
 
-      // const response = await axios.post(
-      //   "http://localhost:8080/api/v1/go2geda/driver/registerDriver",
-      //   data
-      // );
-      // const userResponse = JSON.stringify(response.data.id)
-      // localStorage.setItem("user", userResponse);
-      // const responseData = JSON.parse(localStorage.getItem("user")) 
-      // console.log("user user --> ", responseData)
-
       const response = await axios
-        .post("http://localhost:8080/api/v1/go2geda/driver/registerDriver", obj)
+        .post(`${baseUrl}/api/v1/go2geda/driver/registerDriver`, obj)
         .then((response) => {
           setResponseData(response.data);
         })
         .catch((error) => {
-          console.log(error);
+          if(error.response.data=="EMAIL_ALREADY_EXIST"){
+            alert("EMAIL_ALREADY_EXIST");
+          }
         });
 
 // 

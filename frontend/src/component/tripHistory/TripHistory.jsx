@@ -1,62 +1,62 @@
+import { useEffect, useState } from "react";
 import "../tripHistory/TripHistory.css";
 
 const TripHistory = () => {
+  const [tripHistory, setTripHistory] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const storedSesstion = localStorage.getItem("id");
+
+  useEffect(() => {
+    fetch(`http://localhost:8080/trip/viewDriverTrips/${storedSesstion}`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setTripHistory(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        setLoading(false);
+        console.log(error);
+      });
+  }, [tripHistory]);
+
   return (
     <>
-      <div className="history">
-        <h2>Trip History</h2>
-        <div className="dTable">
-          <table>
-            <tr>
-              <th>Pick-up</th>
-              <th>Destination</th>
-              <th>Price</th>
-              <th>No. of Passengers</th>
-              <th>Time</th>
-              <th>Status</th>
-            </tr>
-            <tr>
-              <td>Lekki Phase 1</td>
-              <td>Obalende</td>
-              <td>1,000.00</td>
-              <td>2</td>
-              <td>19:00</td>
-              <td>OPEN</td>
-            </tr>
-            <tr>
-              <td>Ajah</td>
-              <td>Yaba Sabo</td>
-              <td>1,500.00</td>
-              <td>1</td>
-              <td>10:00</td>
-              <td>COMPLETED</td>
-            </tr>
-            <tr>
-              <td>Iyana Ipaja</td>
-              <td>Ikeja</td>
-              <td>700.00</td>
-              <td>3</td>
-              <td>2:00</td>
-              <td>COMPLETED</td>
-            </tr>
-            <tr>
-              <td>Ajegunle</td>
-              <td>Apapa</td>
-              <td>1700.00</td>
-              <td>4</td>
-              <td>4:00</td>
-              <td>CLOSED</td>
-            </tr>
-            <tr>
-              <td>Iyana Ipaja</td>
-              <td>Ikeja</td>
-              <td>700.00</td>
-              <td>3</td>
-              <td>2:45</td>
-              <td>COMPLETED</td>
-            </tr>
-          </table>
-        </div>
+      <div>
+        
+          <div className="history">
+            <h2>Trip History</h2>
+            <div className="dTable">
+              <table>
+                <tr>
+                  <th>Pick-up</th>
+                  <th>Destination</th>
+                  <th>Price</th>
+                  <th>No. of Passengers</th>
+                  <th>Time</th>
+                  <th>Status</th>
+                </tr>
+                {loading ? (
+                <p>Loading...</p>
+              ) : tripHistory.length > 0 ? (
+                tripHistory.map((trip, index) => (
+                  <tr key={index}>
+                    <td>{trip.pickup}</td>
+                    <td>{trip.destination}</td>
+                    <td>{trip.pricePerSeat}</td>
+                    <td>{trip.numberOfSeatsAvailable}</td>
+                    <td>{trip.startTime}</td>
+                    <td>{trip.tripStatus}</td>
+                  </tr>
+                ))
+              ) : (
+                <tr>
+                  <td colSpan="6">No trip history</td>
+                </tr>
+              )}
+              </table>
+            </div>
+          </div>
       </div>
     </>
   );
