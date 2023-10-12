@@ -26,15 +26,15 @@ const Board = () => {
   useEffect(() => {
     if (driverId) {
       const response = axios
-        .get(`http://localhost:8080/trip/trip-requests/${driverId}`)
-        .then((response) => {
-          console.log(response);
-          setTripRequests(response.data);
-          setDriverHasRequests(true);
-        })
-        .catch((error) => {
-          console.error("Error fetching trip requests:", error);
-        });
+          .get(`http://localhost:8080/trip/trip-requests/${driverId}`)
+          .then((response) => {
+            console.log(response);
+            setTripRequests(response.data);
+            setDriverHasRequests(true);
+          })
+          .catch((error) => {
+            console.error("Error fetching trip requests:", error);
+          });
     } else {
       console.error("User ID not found in local storage");
     }
@@ -46,7 +46,7 @@ const Board = () => {
     const fetchCreatedTrips = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/trip/driver-Trip/${driverId}`
+            `http://localhost:8080/trip/driver-Trip/${driverId}`
         );
         const trips = response.data;
         setCreatedTrips(trips);
@@ -62,7 +62,7 @@ const Board = () => {
   const startTrip = async (tripid) => {
     try {
       const response = await axios.post(
-        `http://localhost:8080/trip/startTrip/${tripid}`
+          `http://localhost:8080/trip/startTrip/${tripid}`
       );
       const trips = response.data;
       console.log(trips);
@@ -74,7 +74,7 @@ const Board = () => {
   const endTrip = async (tripid) => {
     try {
       const response = await axios.post(
-        `http://localhost:8080/trip/endTrip/${tripid}`
+          `http://localhost:8080/trip/endTrip/${tripid}`
       );
       const trips = response.data;
       console.log(trips);
@@ -86,7 +86,7 @@ const Board = () => {
   const cancelTrip = async (tripid) => {
     try {
       const response = await axios.post(
-        `http://localhost:8080/trip/cancelTrip/${tripid}`
+          `http://localhost:8080/trip/cancelTrip/${tripid}`
       );
       const trips = response.data;
       console.log(trips);
@@ -98,23 +98,23 @@ const Board = () => {
   const renderTrips = () => {
     if (driverHasCreatedTrips) {
       return (
-        <div>
-          <ul>
-            {createdTrip.map((trip) => (
-              <div className="created-trip-card" key={trip.id}>
-                <div className="pickup">
-                  <p>Pickup {trip.pickup}</p>
-                </div>
-                <div className="destination">
-                  <p>Dest. {trip.destination}</p>
-                </div>
-                <button onClick={() => startTrip(trip.id)}>Start</button>
-                <button onClick={() => endTrip(trip.id)}>End</button>
-                <button onClick={() => cancelTrip(trip.id)}>Cancel</button>
-              </div>
-            ))}
-          </ul>
-        </div>
+          <div>
+            <ul>
+              {createdTrip.map((trip) => (
+                  <div className="created-trip-card" key={trip.id}>
+                    <div className="pickup">
+                      <p>Pickup {trip.pickup}</p>
+                    </div>
+                    <div className="destination">
+                      <p>Dest. {trip.destination}</p>
+                    </div>
+                    <button onClick={() => startTrip(trip.id)}>Start</button>
+                    <button onClick={() => endTrip(trip.id)}>End</button>
+                    <button onClick={() => cancelTrip(trip.id)}>Cancel</button>
+                  </div>
+              ))}
+            </ul>
+          </div>
       );
     } else {
       return null;
@@ -122,99 +122,119 @@ const Board = () => {
   };
   useEffect(() => {
     fetch(`http://localhost:8080/trip/viewDriverTrips/${storedSesstion}`)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setTripHistory(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        setLoading(false);
-        console.log(error);
-      });
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          setTripHistory(data);
+          setLoading(false);
+        })
+        .catch((error) => {
+          setLoading(false);
+          console.log(error);
+        });
   }, [tripHistory]);
 
   const renderTripHistory = () => {
     return (
-      <>
-        {loading ? (
-          <p>Loading...</p>
-        ) : tripHistory.length > 0 ? (
-          tripHistory.map((trip, index) => (
-            <tr key={index}>
-              <td>{trip.pickup}</td>
-              <td>{trip.destination}</td>
-              <td>{trip.pricePerSeat}</td>
-              <td>{trip.numberOfSeatsAvailable}</td>
-              <td>{trip.startTime}</td>
-              <td>{trip.tripStatus}</td>
-            </tr>
-          ))
-        ) : (
-          <tr>
-            <td colSpan="6">No trip history</td>
-          </tr>
-        )}
-      </>
+        <>
+          {loading ? (
+              <p>Loading...</p>
+          ) : tripHistory.length > 0 ? (
+              tripHistory.map((trip, index) => (
+                  <tr key={index}>
+                    <td>{trip.pickup}</td>
+                    <td>{trip.destination}</td>
+                    <td>{trip.pricePerSeat}</td>
+                    <td>{trip.numberOfSeatsAvailable}</td>
+                    <td>{trip.startTime}</td>
+                    <td>{trip.tripStatus}</td>
+                  </tr>
+              ))
+          ) : (
+              <tr>
+                <td colSpan="6">No trip history</td>
+              </tr>
+          )}
+        </>
     );
   };
 
   return (
-    <>
-      <div className="container">
-        <div className="dashboard-container">
-          <div className="right-board">
-            <div className="top">
-              <div className="left">
-                <div className="no">
-                  <h2>Created Trips</h2>
+      <>
+        <div className="container">
+          <div className="dashboard-container">
+            <div className="right-board">
+              <div className="top">
+                <div className="left">
+                  <div className="no">
+                    <h2>Created Trips</h2>
+                  </div>
+                  <div>{renderTrips()}</div>
                 </div>
-                <div>{renderTrips()}</div>
-              </div>
 
-              <div className="middle">
-                <div className="request">
-                  <h2>Request</h2>
+                <div className="middle">
+                  <div className="request">
+                    <h2>Request</h2>
+                  </div>
+                  <div>
+                    <ul>
+                      {tripRequests.map((request) => (
+                          <div key={request.id} className="card">
+                            <div className="avatar">
+                              <Avatar
+                                  name={
+                                      request.senderFirstName +
+                                      " " +
+                                      request.senderLastName
+                                  }
+                                  size="50"
+                                  round={true}
+                              />
+                            </div>
+                            <div className="name">
+                              <p>
+                                {request.senderFirstName +
+                                    " " +
+                                    request.senderLastName}
+                              </p>
+                            </div>
+                            <div className="checks">
+                              <ImCheckboxChecked size={23} color="green" />
+                              <GiCancel size={23} color="red" />
+                            </div>
+                          </div>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                <div>
-                  <ul>
-                    {tripRequests.map((request) => (
-                      <div key={request.id} className="card">
-                        <div className="avatar">
-                          <Avatar
-                            name={
-                              request.senderFirstName +
-                              " " +
-                              request.senderLastName
-                            }
-                            size="50"
-                            round={true}
-                          />
-                        </div>
-                        <div className="name">
-                          <p>
-                            {request.senderFirstName +
-                              " " +
-                              request.senderLastName}
-                          </p>
-                        </div>
-                        <div className="checks">
-                          <ImCheckboxChecked size={23} color="green" />
-                          <GiCancel size={23} color="red" />
-                        </div>
-                      </div>
-                    ))}
-                  </ul>
+                <div className="right">
+                  <div className="no">
+                    <h2>Wallet Balance</h2>
+                  </div>
+                  <div className="numberOfTrips">
+                    <TbCurrencyNaira />
+                    <p>1,000.00</p>
+                  </div>
                 </div>
               </div>
-              <div className="right">
-                <div className="no">
-                  <h2>Wallet Balance</h2>
+              <div className="bottom">
+                <h2>Trips</h2>
+                <div className="Table">
+                  <table>
+                    <tr>
+                      <th>Pick-up</th>
+                      <th>Destination</th>
+                      <th>Price</th>
+                      <th>No. of Passengers</th>
+                      <th>Time</th>
+                      <th>Status</th>
+                    </tr>
+                    {
+                      renderTripHistory()
+                    }
+                  </table>
                 </div>
-                <div className="numberOfTrips">
-                  <TbCurrencyNaira />
-                  <p>1,000.00</p>
-                </div>
+                {/* <TripHistory /> */}
               </div>
             </div>
             <div className="bottom">
@@ -237,8 +257,7 @@ const Board = () => {
             </div>
           </div>
         </div>
-      </div>
-    </>
+      </>
   );
 };
 

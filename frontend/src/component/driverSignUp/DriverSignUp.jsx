@@ -44,17 +44,17 @@ const DriverSignUp = () => {
     try {
 
       const response = await axios
-        .post("http://localhost:8080/api/v1/go2geda/driver/registerDriver", obj)
-        .then((response) => {
-          setResponseData(response.data);
-        })
-        .catch((error) => {
-          if(error.response.data=="EMAIL_ALREADY_EXIST"){
-            alert("EMAIL ALREADY EXIST");
-          }
-        });
+          .post(`${baseUrl}/api/v1/go2geda/driver/registerDriver`, obj)
+          .then((response) => {
+            setResponseData(response.data);
+          })
+          .catch((error) => {
+            if(error.response.data=="EMAIL_ALREADY_EXIST"){
+              alert("EMAIL ALREADY EXIST");
+            }
+          });
 
-// 
+//
       if (response.data.error === "Email already exists") {
         alert("EMAIL ALREADY EXIST");
       } else {
@@ -72,67 +72,67 @@ const DriverSignUp = () => {
       console.log("ID:", responseData.id);
       console.log("Name:", responseData.message);
     }
-    
+
   }, [responseData]);
 
   return (
-    <>
-      <div className="dcontainer">
-        <div className="dcard">
-          <Link to="/" className="iom">
-            <IoMdArrowRoundBack size="30px" />
-          </Link>
-          <div className="dleftSide">
-            <img src={image} alt="DriverIllustration" />
-          </div>
-          <div className="drightSide">
-            <h4>Become a driver</h4>
-            <h5>Sign up to drive</h5>
-            <form className="dforms">
-              <input
-                type="text"
-                name="firstName"
-                placeholder="First Name"
-                onChange={handleChange}
-              />
-              <input
-                type="text"
-                name="lastName"
-                placeholder="Last Name"
-                onChange={handleChange}
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                name="email"
-                onChange={handleChange}
-              />
-              <input
-                type="text"
-                name="phoneNumber"
-                placeholder="PhoneNumber"
-                onChange={handleChange}
-              />
-              <input
-                type="password"
-                name="password"
-                placeholder="Password"
-                onChange={handleChange}
-              />
-            </form>
-
-            <div className="dbelow-forms">
-              <p>Already have an account?</p>
-              <a href="/login">Login</a>
+      <>
+        <div className="dcontainer">
+          <div className="dcard">
+            <Link to="/" className="iom">
+              <IoMdArrowRoundBack size="30px" />
+            </Link>
+            <div className="dleftSide">
+              <img src={image} alt="DriverIllustration" />
             </div>
+            <div className="drightSide">
+              <h4>Become a driver</h4>
+              <h5>Sign up to drive</h5>
+              <form className="dforms">
+                <input
+                    type="text"
+                    name="firstName"
+                    placeholder="First Name"
+                    onChange={handleChange}
+                />
+                <input
+                    type="text"
+                    name="lastName"
+                    placeholder="Last Name"
+                    onChange={handleChange}
+                />
+                <input
+                    type="email"
+                    placeholder="Email"
+                    name="email"
+                    onChange={handleChange}
+                />
+                <input
+                    type="text"
+                    name="phoneNumber"
+                    placeholder="PhoneNumber"
+                    onChange={handleChange}
+                />
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    onChange={handleChange}
+                />
+              </form>
 
-            <button className="dsign-ups" onClick={handleSubmit}>
-              Sign Up
-            </button>
+              <div className="dbelow-forms">
+                <p>Already have an account?</p>
+                <a href="/login">Login</a>
+              </div>
+
+              <button className="dsign-ups" onClick={handleSubmit}>
+                Sign Up
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </>
+      </>
   );
 };
 export default DriverSignUp;

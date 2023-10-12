@@ -20,6 +20,10 @@ const VerifyCommuter = () => {
     console.log(profilePicture);
     navigate("/commuter-dDashboard");
   };
+
+
+
+
   return (
     <div className="main-com">
       <div className="commuter-verify-innerConatiner">
