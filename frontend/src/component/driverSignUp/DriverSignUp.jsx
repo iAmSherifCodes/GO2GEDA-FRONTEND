@@ -40,7 +40,7 @@ const DriverSignUp = () => {
       password: details.password,
     };
 
-    // const baseUrl  = "http://localhost:8080";
+    const baseUrl  = "http://localhost:8080";
     try {
 
       const response = await axios
