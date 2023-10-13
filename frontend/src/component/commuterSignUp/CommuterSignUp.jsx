@@ -42,7 +42,8 @@ const CommuterSignUp = () => {
         "http://localhost:8080/api/v1/go2geda/commuter/register-commuter",
         data
       );
-      console.log(data);
+
+      console.log(response.data)
       const commuterId = response.data.id;
       sessionStorage.setItem('id',commuterId)
 
