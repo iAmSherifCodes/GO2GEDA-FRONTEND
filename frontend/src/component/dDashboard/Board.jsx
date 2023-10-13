@@ -234,7 +234,6 @@ const Board = () => {
                     }
                   </table>
                 </div>
-                {/* <TripHistory /> */}
               </div>
             </div>
             

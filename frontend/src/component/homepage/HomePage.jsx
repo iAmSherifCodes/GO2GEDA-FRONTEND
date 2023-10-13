@@ -27,7 +27,7 @@ const HomePage = () => {
         </div>
 
         <div className="second-step">
-          <h3>What make us unique?</h3>
+          <h3>What makes us unique?</h3>
           <p>
             Go2Geda is an innovative mobility solution that empowers users to
             efficiently book transportation and share costs

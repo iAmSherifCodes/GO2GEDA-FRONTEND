@@ -1,12 +1,13 @@
 import ".//DashboardStyle.css";
 import { CgProfile } from "react-icons/cg";
 import SideMenu from "../sideMenu/SideMenu";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import Board from "./Board";
 import CreateTrip from "../createTrip/CreateTrip";
 import BookingRequest from "../bookingRequest/BookingRequest";
 
 const DriverDashboard = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="dashboard-navbar">
