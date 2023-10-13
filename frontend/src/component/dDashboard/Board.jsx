@@ -237,24 +237,7 @@ const Board = () => {
                 {/* <TripHistory /> */}
               </div>
             </div>
-            <div className="bottom">
-              <h2>Trips</h2>
-              <div className="Table">
-                <table>
-                  <tr>
-                    <th>Pick-up</th>
-                    <th>Destination</th>
-                    <th>Price</th>
-                    <th>No. of Passengers</th>
-                    <th>Time</th>
-                    <th>Status</th>
-                  </tr>
-                  {
-                    renderTripHistory()
-                  }
-                </table>
-              </div>
-            </div>
+            
           </div>
         </div>
       </>
