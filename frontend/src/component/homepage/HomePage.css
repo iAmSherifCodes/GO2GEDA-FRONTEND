@@ -19,7 +19,6 @@
 #homepage-first-step-ensure{
     width: 80%;
 }
-
 .homepage-first-step-text p{
     font-size: 2rem;
     width: 70%;
@@ -31,41 +30,40 @@
     width: 70%;
     font-size: 2.5rem;
 }
-
 .homepage-first-step-anime-container{
     height: 600px;
     width: 600px;
     margin-right: 0px;
 }
-
 .homepage-first-step img{
     width: 25%;
     height: 25%;
     margin-left: 600px;
 }
 
-.second-step{
-    margin-top: 40px;
+.homepage-second-step{
+    padding: 40px 0px;
+    margin-top: 202px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
+    background-color: #e0e0ff;
 }
 
-.second-step p{
+.homepage-second-step p{
     margin-top: 40px;
     font-family: 'Open Sans';
     text-align: center;
     font-size: 1.4rem;
-    color: #8181EA;
+    color: rgb(45, 45, 45);
 }
 
-.second-step h3{
-    
+.homepage-second-step h3{
     font-size: 2rem;
-    color: #171FE7;
-    font-family: 'Open Sans';
+    /* margin-top: 40px; */
+    color: rgb(45, 45, 45);
 }
 
 .third-step{
