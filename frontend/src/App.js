@@ -1,4 +1,3 @@
-import NavBar from "./component/Navbar";
 import Footer from "./component/footer/footer";
 import HomePage from "./component/homepage/HomePage";
 import SignIn from "./component/signIn/SignIn";

@@ -59,6 +59,38 @@ const Board = () => {
     fetchCreatedTrips();
   }, [driverId]);
 
+  const acceptTrip = async (tripId,commuterId) =>{
+    const confirmation = window.confirm("Are you sure you want to accept this trip request?");
+    if (confirmation){
+    const request = {
+      commuterId: commuterId,
+    tripId: tripId
+    }
+    try{
+      const response = await axios.post("http://localhost:8080/trip/acceptTrip",request)
+      console.log(response.data)
+      alert("Commuter has been successfully added to Trip")
+    }catch(error){
+      console.error('error accepting trip request')
+    }
+  }}
+
+  const rejectTrip = async (tripId,commuterId) =>{
+    const confirmation = window.confirm("Are you sure you want to reject this trip request?");
+    if (confirmation){
+    const request = {
+      commuterId: commuterId,
+    tripId: tripId
+    }
+    try{
+      const response = await axios.post("http://localhost:8080/trip/rejectTrip",request)
+      console.log(response.data)
+      alert("You have successfully rejected the trip request")
+    }catch(error){
+      console.error('error rejecting trip request')
+    }
+  }}
+
   const startTrip = async (tripid) => {
     try {
       const response = await axios.post(
@@ -199,8 +231,8 @@ const Board = () => {
                               </p>
                             </div>
                             <div className="checks">
-                              <ImCheckboxChecked size={23} color="green" />
-                              <GiCancel size={23} color="red" />
+                              <ImCheckboxChecked  size={23} color="green" onClick={()=> acceptTrip(request.tripId, request.senderId)} />
+                              <GiCancel size={23} color="red" onClick={()=> rejectTrip(request.tripId, request.senderId)} />
                             </div>
                           </div>
                       ))}

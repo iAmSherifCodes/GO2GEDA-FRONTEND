@@ -5,7 +5,7 @@ import group from "../homepage/assets/friends.png";
 import partner from "../homepage/assets/partnership.png";
 import anime from "../homepage/assets/anime.json";
 import Lottie from "lottie-react";
-import NavBar from "../Navbar";
+import NavBar from "./Navbar";
 import Footer from "../footer/footer";
 
 const HomePage = () => {

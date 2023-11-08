@@ -106,19 +106,20 @@ const CommuterBoard = () => {
   }, [storedSession]); // Assuming storedSession is the actual dependency for this effect
   
 
-  // useEffect(() => {
-  //   fetch(`http://localhost:8080/trip/viewCommuterTrips/${storedSession}`)
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       console.log(data);
-  //       setTripHistory(data);
-  //       setLoading(false);
-  //     })
-  //     .catch((error) => {
-  //       setLoading(false);
-  //       console.log(error);
-  //     });
-  // }, [tripHistory]);
+  useEffect(() => {
+    fetch(`http://localhost:8080/trip/viewBookedTrip/${storedSession}`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(storedSession);
+        console.log(data);
+        setBookedTrips(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        setLoading(false);
+        console.log(error);
+      });
+  }, []);
 
   return (
     <>
@@ -138,7 +139,7 @@ const CommuterBoard = () => {
                   <h2>Number of Trips</h2>
                 </div>
                 <div className="numberOfTrips">
-                  <p>12</p>
+                  <p>0</p>
                 </div>
               </div>
               <div className="right">
