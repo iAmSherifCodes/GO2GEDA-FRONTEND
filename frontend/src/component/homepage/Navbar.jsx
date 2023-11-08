@@ -28,7 +28,7 @@ const NavBar = () => {
 
           {/* <div > */}
             <button className="navbar-login" onClick="/sign-in">
-              Login
+            Login
             <FiLogIn />
             </button>
           {/* </div> */}

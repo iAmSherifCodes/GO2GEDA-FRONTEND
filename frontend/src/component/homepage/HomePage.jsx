@@ -12,21 +12,21 @@ const HomePage = () => {
   return (
     <>
     <NavBar/>
-      <div className="container">
-        <div className="first-step">
-          <div className="text">
+      <div className="homepage-container">
+        <div className="homepage-first-step">
+          <div className="homepage-first-step-text">
             <h3>
-              Welcome to <span style={{ color: "#8181EA" }}>Go2Geda</span>
+              Welcome to <span style={{ color: "rgb(50, 50, 251)" }}>Go2Geda</span>
             </h3>
-            <h4>Transportation made easy.</h4>
-            <h4 id="ensure">
+            <p>Transportation made easy.</p>
+            <p id="homepage-first-step-ensure">
               Ensuring comfortable and affordable transportation
-            </h4>
+            </p>
           </div>
-          <Lottie className="anime-container" animationData={anime}></Lottie>
+          <Lottie className="homepage-first-step-anime-container" animationData={anime}></Lottie>
         </div>
 
-        <div className="second-step">
+        <div className="homepage-second-step">
           <h3>What makes us unique?</h3>
           <p>
             Go2Geda is an innovative mobility solution that empowers users to
@@ -37,7 +37,7 @@ const HomePage = () => {
           </p>
         </div>
 
-        <div className="third-step">
+        <div className="homepage-third-step">
           <div className="info">
             <img src={group} alt="group icon" />
             <p>
@@ -57,7 +57,7 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className="fourth-step">
+        <div className="homepage-fourth-step">
           <h3>BOOK A RIDE WITH US TODAY</h3>
           <p>Discover new connections, save on costs, and travel in comfort.</p>
           <div className="btn">
